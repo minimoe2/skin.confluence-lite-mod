@@ -245,6 +245,14 @@
   <string id="31980">Recently Added Items</string>
   <string id="31981">Random Items</string>
   <string id="31982">AddOns</string>
+  <string id="31983">Show SubTitle Country Flag</string>
+  <string id="31984">Media Views - Global</string>
+  <string id="31985">Use External Watch Status Icons [COLOR=grey3](Media Thumbnails Only)[/COLOR]</string>
+  <string id="31986">Allow External "UnWatched" Icon</string>
+  <string id="31987">Wallstream</string>
+  <string id="31988">Darken Watched</string>
   
+  
+ 
   <!-- strings 31000 thru 31999 reserved for skins -->
   </strings>

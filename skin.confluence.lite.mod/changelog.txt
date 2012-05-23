@@ -1,3 +1,13 @@
+[B]1.0.9[/B] [I]May 2012[/I]
+- Bugfix Music Addons not behaving
+- Added Music Albums and Artists option to Main Menu Options
+- Added Full Wall Views
+- Introduced Subtitle flags
+- Bugfix Home Panel Music upkey did not return user to bottom menu
+- Bugfix LowList MenuItem Label widths
+- Added WallStream View - + option for darkened watched item
+- Added option for External Watched Icons
+
 [B]1.0.8[/B] [I]May 2012[/I]
 - ReIntroduced clock to Video OSD
 - Added Options for Favourites and Addons Windows to Main Menu + Shutdown

@@ -279,6 +279,24 @@
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(723)</visible>
+				<control type="image">
+					<posx>35</posx>
+					<posy>40</posy>
+					<width>1240</width>
+					<height>620</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>652</posy>
+					<width>1240</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(724) | Control.IsVisible(733)</visible>
 				<control type="image">
 					<posx>30</posx>

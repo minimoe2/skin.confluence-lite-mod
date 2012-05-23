@@ -368,7 +368,7 @@
 					<height>290</height>
 					<onleft>8002</onleft>
 					<onright>8002</onright>
-					<onup>9000</onup>
+					<onup>20</onup>
 					<ondown>608</ondown>
 					<preloaditems>4</preloaditems>
 					<scrolltime>150</scrolltime>
@@ -645,7 +645,7 @@
 						<height>290</height>
 						<onleft>8004</onleft>
 						<onright>8004</onright>
-						<onup>9000</onup>
+						<onup>20</onup>
 						<ondown>608</ondown>
 						<preloaditems>4</preloaditems>
 						<scrolltime>150</scrolltime>

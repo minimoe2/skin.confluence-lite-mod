@@ -26,6 +26,30 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 		</control>
+		<control type="image" id="1001">
+			<description>Artist Biography background</description>
+			<posx>750</posx>
+			<posy>41</posy>
+			<width>515</width>
+			<height>540</height>
+			<texture border="20">ContentPanel.png</texture>
+			<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtistBiography))</visible>
+		</control>
+		<control type="textbox" id="1002">
+			<description>Artist Biography from Artist Slideshow</description>
+			<posx>765</posx>
+			<posy>55</posy>
+			<width>485</width>
+			<height>510</height>
+			<align>justify</align>
+			<aligny>top</aligny>
+			<font>font14</font>
+			<scroll>true</scroll>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="10000" repeat="5000"></autoscroll>
+			<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)]</label>
+			<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtistBiography))</visible>
+		</control>
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
 			<posx>430</posx>

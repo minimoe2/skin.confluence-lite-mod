@@ -7,12 +7,14 @@
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
+	<include file="Viewtype_Lowlist.xml" />
+	<include file="Viewtype_Wallstream.xml" />
+	<!--include file="Viewtype_Musicwallstream.xml" /-->
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesCDWall.xml" />
-	<include file="Viewtype_Lowlist.xml" />
 	<include file="IncludesGenreFlagging.xml" />
 	<include file="weather+\10DayForecast.xml" />
 	<include file="weather+\36HourForecast.xml" />
