@@ -1,4 +1,5 @@
 <window id="0">
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>

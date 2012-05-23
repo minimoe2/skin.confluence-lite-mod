@@ -1,4 +1,8 @@
-[B]1.0.0[/B] [I]Apr 2012[/I]
+[B]1.0.1[/B] [I]Apr 2012[/I]
+- Added Music Playlist extensions .xsp and .pls
+- Added option for Music Videos and Favourites
+- Required script.favourites
 
+[B]1.0.0[/B] [I]Apr 2012[/I]
 - Added User Defined Main Menu Items
 
