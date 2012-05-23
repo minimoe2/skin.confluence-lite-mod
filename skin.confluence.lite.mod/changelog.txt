@@ -1,3 +1,13 @@
+[B]1.0.2[/B] [I]Apr 2012[/I]
+- Added Recently Added Music Videos
+- Added support for script.randomandlastitems if installed
+- Added support for script.watchlist if installed
+- Added support for script.xbmc.intro.movie if installed
+- Added support for script.artistslideshow if installed
+- Added support for script.cinema.experience if installed
+- Added Qwerty Keyboard
+- Added support for script.library.editor if installed
+
 [B]1.0.1[/B] [I]Apr 2012[/I]
 - Added Music Playlist extensions .xsp and .pls
 - Added option for Music Videos and Favourites

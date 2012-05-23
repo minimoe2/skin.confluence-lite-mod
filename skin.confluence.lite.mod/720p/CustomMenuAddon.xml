@@ -48,26 +48,26 @@
 			<control type="list" id="450">
                 <posx>390r</posx>
                 <posy>90</posy>
-                <width>450</width>
-      			<height>600</height>
+                <width>440</width>
+      			<height>560</height>
 				<onup>450</onup>
                 <onleft>Dialog.Close(2114)</onleft>
-                <onright>450</onright>
+                <onright>60</onright>
                 <ondown>450</ondown>
-                <pagecontrol>-</pagecontrol>
+                <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
 				<itemlayout height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>370</width>
+                        <width>360</width>
                         <height>40</height>
                         <texture border="5">button-nofocus.png</texture>
                     </control>
                     <control type="label">
                         <posx>10</posx>
                         <posy>0</posy>
-                        <width>350</width>
+                        <width>340</width>
                         <height>40</height>
                         <font>font12_title</font>
                         <align>left</align>
@@ -80,7 +80,7 @@
                     <control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>370</width>
+						<width>360</width>
 						<height>40</height>
 	                     <visible>!Control.HasFocus(450)</visible>
 	                     <texture border="3">button-nofocus.png</texture>
@@ -88,7 +88,7 @@
 	                <control type="image">
 	                    <posx>0</posx>
 	                    <posy>0</posy>
-	                    <width>370</width>
+	                    <width>360</width>
 	                    <height>40</height>
 	                    <visible>Control.HasFocus(450)</visible>
 	                    <texture border="3">button-focus.png</texture>
@@ -96,7 +96,7 @@
 	                <control type="label">
 	                    <posx>10</posx>
 	                    <posy>0</posy>
-	                    <width>350</width>
+	                    <width>340</width>
 	                    <height>40</height>
 	                    <font>font12_title</font>
 	                    <align>left</align>
@@ -161,6 +161,18 @@
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>
 					<item id="6">
+	                    <description>Cinema</description>
+						<label>$LOCALIZE[24000] - $LOCALIZE[31961]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,RunScript(script.cinema.experience,movietitles))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Movies)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[31961])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+						<visible>System.HasAddon(script.cinema.experience) + Library.HasContent(Movies)</visible>
+	                </item>
+					<item id="7">
 	                    <description>TVShows</description>
 						<label>$LOCALIZE[31954] - $LOCALIZE[20343]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -171,7 +183,7 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>
-					<item id="7">
+					<item id="8">
 	                    <description>Concerts</description>
 						<label>$LOCALIZE[31954] - $LOCALIZE[20391]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -182,7 +194,7 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>					
-					<item id="8">
+					<item id="9">
 	                    <description>Music</description>
 						<label>$LOCALIZE[31954] - $LOCALIZE[2]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -193,7 +205,7 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>		
-					<item id="9">
+					<item id="10">
 	                    <description>Programs</description>
 						<label>$LOCALIZE[31954] - $LOCALIZE[0]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -204,7 +216,7 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>	
-					<item id="10">
+					<item id="11">
 	                    <description>Disc</description>
 						<label>$LOCALIZE[31954] - $LOCALIZE[341]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -215,18 +227,19 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 	                </item>	
-					<item id="11">
+					<item id="12">
 	                    <description>Favourites</description>
 	                    <label>$LOCALIZE[31958] - $LOCALIZE[1036]</label>
 	                    <onclick>Dialog.Close(2114)</onclick>
 						<onclick>ActivateWindow(1114)</onclick>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Favourite)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>																		
 						<visible>System.HasAddon(script.favourites)</visible>
 	                </item>
-					<item id="12">
+					<item id="13">
                         <description>Script</description>
                         <label>$LOCALIZE[31955] - $LOCALIZE[24009]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -239,7 +252,7 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
                     </item>
-					<item id="13">
+					<item id="14">
                         <description>Add-Ons</description>
                         <label>$LOCALIZE[31955] - $LOCALIZE[24000]</label>
 						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
@@ -252,13 +265,25 @@
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 					</item>
-					<item id="14">
+					<item id="15">
+	                    <description>Music PartyMix</description>
+						<label>$LOCALIZE[2] - $LOCALIZE[589]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,PlayerControl(PartyMode(music)))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Music)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[589])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+	                </item>
+					<item id="16">
 	                    <description>m3u Music Playlist</description>
 	                    <label>$LOCALIZE[31022] $LOCALIZE[559]</label>
 						<onclick>Skin.SetFile(UsrSelectAddon,.m3u|.xsp|.pls,special://musicplaylists/)</onclick>
 						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[559])</onclick>	
 	                    <onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,PlayMedia(&quot;$INFO[Skin.String(UsrSelectAddon)]&quot;))</onclick>
-						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,m3uPlaylist)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Playlist)</onclick>
 						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]PlayList,$INFO[Skin.String(UsrSelectAddon)])</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
@@ -266,20 +291,20 @@
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
 						<visible>Library.HasContent(Music)</visible>
                     </item>
-					<item id="15">
+					<item id="17">
                         <description>Playlist Video</description>
                         <label>$LOCALIZE[31021] $LOCALIZE[559]</label>
                         <onclick>Skin.SetFile(UsrSelectAddon,.xsp,special://videoplaylists/)</onclick>
 						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[559])</onclick>	
                         <onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(VideoLibrary,$INFO[Skin.String(UsrSelectAddon)]))</onclick>
-						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,xspPlaylist)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Playlist)</onclick>
 						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]PlayList,$INFO[Skin.String(UsrSelectAddon)])</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
                         <onclick>Dialog.Close(2114)</onclick>
 						<onclick>Skin.SetString(UsrSelectLabel)</onclick>
                     </item>
-					<item id="16">
+					<item id="18">
                         <description>Video Streaming File</description>
                         <label>$LOCALIZE[31956]</label>
                         <onclick>Skin.SetFile(UsrSelectAddon,.strm,/)</onclick> 
@@ -293,6 +318,22 @@
 						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>	
                     </item>
 				</content>				
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>1250</posx>
+				<posy>95</posy>
+				<width>25</width>
+				<height>550</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(450)</visible>
 			</control>
 		</control>
 	</controls>

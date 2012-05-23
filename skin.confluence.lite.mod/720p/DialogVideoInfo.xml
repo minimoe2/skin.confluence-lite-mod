@@ -1075,9 +1075,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<posx>210</posx>
+					<posx>200</posx>
 					<posy>660</posy>
-					<width>1030</width>
+					<width>1065</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
@@ -1135,6 +1135,27 @@
 						<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 						<visible>Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + Container.Content(TVShows)</visible>
 					</control>
+					<control type="button" id="101">
+                        <description>Edit library</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31962]</label>
+						<onclick>XBMC.RunScript(script.library.editor)</onclick>
+                        <visible>container.content(movies) + System.HasAddon(script.library.editor)</visible>
+                     </control>
+                     <control type="button" id="102">
+                        <description>Edit library</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31962]</label>
+						<onclick>XBMC.RunScript(script.library.editor)</onclick>
+                        <visible>System.HasAddon(script.library.editor) + container.content(episodes) | container.content(TVShows) | container.content(seasons)</visible>
+                     </control>
+                     <control type="button" id="103">
+                         <description>Edit library</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31962]</label>
+						<onclick>XBMC.RunScript(script.library.editor)</onclick>
+						<visible>container.content(musicvideos) + System.HasAddon(script.library.editor)</visible>
+                     </control>					
 				</control>
 			</control>
 		</control>

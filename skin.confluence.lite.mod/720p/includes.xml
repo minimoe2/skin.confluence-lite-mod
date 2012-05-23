@@ -1,5 +1,6 @@
 <includes>
 	<include file="defaults.xml" />
+	<include file="IncludesVariables.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
@@ -93,8 +94,8 @@
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>40</height>
-		<width>170</width>
-		<textoffsetx>20</textoffsetx>
+		<width>150</width>
+		<textoffsetx>10</textoffsetx>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12_title</font>
@@ -1097,13 +1098,16 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<variable name="UsrCustomAddonAction">
-		<value condition="substring(Skin.String(UsrSelectAddon),plugin.video,Left)">ActivateWindow(10024,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
-		<value condition="substring(Skin.String(UsrSelectAddon),plugin.audio,Left)">ActivateWindow(10501,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
-		<value condition="substring(Skin.String(UsrSelectAddon),plugin.program,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
-		<value condition="substring(Skin.String(UsrSelectAddon),plugin.games,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
-		<value condition="substring(Skin.String(UsrSelectAddon),script,Left)">runscript($INFO[Skin.String(UsrSelectAddon)])</value>
-	</variable>
+	<include name="KBurnsAnimateFanart">
+		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
+	</include>
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</include>
 	<include name="backgroundfade">
 		 <animation effect="fade" time="600">Visible</animation>
 		 <animation effect="fade" time="600">Hidden</animation>

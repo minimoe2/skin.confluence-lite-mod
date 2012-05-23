@@ -1,5 +1,23 @@
 <window id="0">
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
+	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
+	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">SetProperty(Watchlist_Control,True)</onload>  
+		
+	
+	
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemOnePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemOnePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListOne)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTwoPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTwoPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTwo)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemThreePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemThreePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListThree)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemFourPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFourPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFour)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemFivePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFivePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFive)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemSixPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSixPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSix)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemSevenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSevenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSeven)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemEightPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemEightPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListEight)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemNinePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemNinePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListNine)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTen)</onload>
+	
+	
+	
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
