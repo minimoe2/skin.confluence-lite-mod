@@ -340,7 +340,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.1.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.1.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.1.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoTwo">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.2.ShowTitle)]</value>
@@ -363,7 +363,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.2.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.2.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.2.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoThree">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.3.ShowTitle)]</value>
@@ -386,7 +386,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.3.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.3.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.3.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoFour">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.4.ShowTitle)]</value>
@@ -409,7 +409,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.4.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.4.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.4.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoFive">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.5.ShowTitle)]</value>
@@ -432,7 +432,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.5.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.5.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.5.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoSix">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.6.ShowTitle)]</value>
@@ -455,7 +455,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.6.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.6.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.6.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoSeven">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.7.ShowTitle)]</value>
@@ -478,7 +478,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.7.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.7.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.7.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoEight">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.8.ShowTitle)]</value>
@@ -501,7 +501,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.8.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.8.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.8.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoNine">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.9.ShowTitle)]</value>
@@ -524,7 +524,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.9.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.9.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.9.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistInfoTen">
 		<value condition="Container(9000).Hasfocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)">$INFO[Window(Home).Property(HomePlayListOne.10.ShowTitle)]</value>
@@ -547,7 +547,7 @@
 		<value condition="Container(9000).Hasfocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)">$INFO[Window(Home).Property(HomePlayListEight.10.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)">$INFO[Window(Home).Property(HomePlayListNine.10.Artist)]</value>
 		<value condition="Container(9000).Hasfocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)">$INFO[Window(Home).Property(HomePlayListTen.10.Artist)]</value>
-		<value>-</value>
+		
 	</variable>
 	<variable name="UsrHomePlaylistPathOne">
 		<value condition="Container(9000).Hasfocus(1) + !StringCompare(Window(Home).Property(HomePlayListOne.Type),Music)">PlayMedia($ESCINFO[Window(Home).Property(HomePlayListOne.1.Path)])</value>
@@ -895,6 +895,13 @@
 		<value condition="substring(Skin.String(UsrSelectAddon),plugin.program,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
 		<value condition="substring(Skin.String(UsrSelectAddon),plugin.games,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
 		<value condition="substring(Skin.String(UsrSelectAddon),script,Left)">runscript($INFO[Skin.String(UsrSelectAddon)])</value>
+	</variable>
+		<variable name="NextFiveScroller" type="text">
+		<value condition="!IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">     [COLOR blue][B]$LOCALIZE[31072]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]    [COLOR blue][B]3:[/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]    [COLOR blue][B]4:[/B][/COLOR]  $INFO[MusicPlayer.offset(4).Artist] - $INFO[MusicPlayer.offset(4).Title]    [COLOR blue][B]5:[/B][/COLOR]  $INFO[MusicPlayer.offset(5).Artist] - $INFO[MusicPlayer.offset(5).Title]</value>
+		<value condition="!IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">     [COLOR blue][B]$LOCALIZE[31072]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]    [COLOR blue][B]3:[/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]    [COLOR blue][B]4:[/B][/COLOR]  $INFO[MusicPlayer.offset(4).Artist] - $INFO[MusicPlayer.offset(4).Title]</value>
+		<value condition="!IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">     [COLOR blue][B]$LOCALIZE[31072]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]     [COLOR blue][B]3:[/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]</value>
+		<value condition="!IsEmpty(MusicPlayer.offset(2).Artist) + IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">     [COLOR blue][B]$LOCALIZE[31072]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]</value>
+		<value condition="!IsEmpty(MusicPlayer.offset(1).Artist) + IsEmpty(MusicPlayer.offset(2).Artist) + IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">     [COLOR blue][B]$LOCALIZE[31072]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]</value>
 	</variable>
 	<variable name="RandomOrLastAction" type="text">
 		<value condition="Skin.HasSetting(UseLastNotRandom)">Last</value>

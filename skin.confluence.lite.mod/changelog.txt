@@ -1,3 +1,10 @@
+[[B]1.0.4[/B] [I]Apr 2012[/I]
+- Bugfix Setting for weather icon on home screen
+- Added CD Wall to Music Visualization (From Transparency)
+- Added Setting to Hide Artist Slideshow from Music Viz
+- Added to mudisle.repo
+- Added required "script.tvtunes" "script.watchlist" "script.globalsearch" "script.randomandlastitems"
+
 [[B]1.0.3[/B] [I]Apr 2012[/I]
 - Bugfix Suggested Albums not playing
 - Enabled code Jezz had hidden for weather icon on home screen

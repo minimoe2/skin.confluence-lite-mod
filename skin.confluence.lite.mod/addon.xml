@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.confluence.lite.mod"
-  version="1.0.3"
+  version="1.0.4"
   name="Confluence Lite Mod"
   provider-name="Mudislander">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
+	<import addon="script.artistslideshow" version="1.1.5"/>
+	<import addon="script.tvtunes" version="1.0.15"/>
+	<import addon="script.watchlist" version="0.1.8"/>
+	<import addon="script.favourites" version="3.2.1"/>
+	<import addon="script.globalsearch" version="0.1.7"/> 
+	<import addon="script.randomandlastitems" version="1.2.2"/>
   </requires>
   <extension
     point="xbmc.gui.skin"

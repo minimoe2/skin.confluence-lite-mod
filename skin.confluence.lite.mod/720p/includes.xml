@@ -11,6 +11,7 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
+	<include file="IncludesCDWall.xml" />
 	<include file="weather+\10DayForecast.xml" />
 	<include file="weather+\36HourForecast.xml" />
 	<include file="weather+\WeekendForecast.xml" />

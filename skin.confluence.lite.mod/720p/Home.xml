@@ -35,7 +35,7 @@
 			<texture>xbmc-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<visible>IsEmpty(Weather.Conditions) | !Weather.IsFetched</visible>
+			<visible>IsEmpty(Weather.Conditions) | !Weather.IsFetched | Skin.HasSetting(homepageWeatherinfo)</visible>
 		</control>
 		<!-- Music Info -->
 		<control type="group">
@@ -866,14 +866,10 @@
 				<texture>icon_favourites.png</texture>
 			</control>
 		</control>
-		
-		
-		
-		
 		<control type="group">
 			<posx>20</posx>
 			<posy>0</posy>
-			<visible>!IsEmpty(Weather.Conditions) + Weather.IsFetched</visible>
+			<visible>!Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Conditions) + Weather.IsFetched</visible>
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<description>Weather image</description>
@@ -938,12 +934,6 @@
 				</control>
 			</control>
 		</control>
-		
-		
-		
-		
-		
-		
 		<include>Clock</include>
 		<control type="label">
 			<description>Date label</description>
