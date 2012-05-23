@@ -1,3 +1,18 @@
+[B]1.0.8[/B] [I]May 2012[/I]
+- ReIntroduced clock to Video OSD
+- Added Options for Favourites and Addons Windows to Main Menu + Shutdown
+- Added Submenu for Favourites and Shutdown
+- Made Homescreen Media Panel slightly darker
+- Bugfix Home Media Panel Hidden Setting
+- Bugfix moved Music OSD buttons further left
+- Added System option to popup Shutdown Menu (If System Hidden)
+
+[B]1.0.7[/B] [I]May 2012[/I]
+- Bugfix corrected version number
+
+[B]1.0.6[/B] [I]May 2012[/I]
+- Bugfix glassbar.png changed for correct version
+
 [B]1.0.5[/B] [I]May 2012[/I]
 - Added Low List view to Videos and Music
 - Bugfix Some Home Screen Thumbs not visible

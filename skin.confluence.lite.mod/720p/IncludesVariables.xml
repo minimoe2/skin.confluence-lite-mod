@@ -1,7 +1,7 @@
 <includes>
 	<variable name="DefaultUnSetBackground" type="text">
-		<value condition="!IsEmpty(Skin.CurrentTheme)">special://skin/backgrounds/$INFO[Skin.CurrentTheme].jpg</value>
-		<value>special://skin/backgrounds/Skin default.jpg</value>
+		<value condition="!IsEmpty(Skin.CurrentTheme) + !stringcompare(Skin.CurrentTheme,$LOCALIZE[15109])">special://skin/backgrounds/$INFO[Skin.CurrentTheme].jpg</value>
+		<value>special://skin/backgrounds/background.jpg</value>
 	</variable>
 	<variable name="CommonScreenBackground" type="text">
 		<value condition="StringCompare(Window(home).Property(MenuItemActive),ItemOne) + !IsEmpty(Skin.String(HomeItemOneBackground))">$INFO[Skin.String(HomeItemOneBackground)]</value>
@@ -15,8 +15,8 @@
 		<value condition="StringCompare(Window(home).Property(MenuItemActive),ItemNine) + !IsEmpty(Skin.String(HomeItemNineBackground))">$INFO[Skin.String(HomeItemNineBackground)]</value>
 		<value condition="StringCompare(Window(home).Property(MenuItemActive),ItemTen) + !IsEmpty(Skin.String(HomeItemTenBackground))">$INFO[Skin.String(HomeItemTenBackground)]</value>
 		<value condition="StringCompare(Window(home).Property(MenuItemActive),Settings) + !IsEmpty(Skin.String(HomeSystemBackground))">$INFO[Skin.String(HomeSystemBackground)]</value>		
-		<value condition="!IsEmpty(Skin.CurrentTheme)">special://skin/backgrounds/$INFO[Skin.CurrentTheme].jpg</value>
-		<value>special://skin/backgrounds/Skin default.jpg</value>
+		<value condition="!IsEmpty(Skin.CurrentTheme)  + !stringcompare(Skin.CurrentTheme,$LOCALIZE[15109])">special://skin/backgrounds/$INFO[Skin.CurrentTheme].jpg</value>
+		<value>special://skin/backgrounds/background.jpg</value>
 	</variable>
 	<variable name="GenreFlagPath">
 		<value condition="Skin.HasSetting(UsrGenreFanArt)">MovieGenre/</value>

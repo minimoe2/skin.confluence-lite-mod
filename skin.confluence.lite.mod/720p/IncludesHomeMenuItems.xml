@@ -185,25 +185,30 @@
 		</control>
 		<control type="button" id="90122">
 			<include>ButtonHomeSubCommonValues</include>
+			<label>13005</label>
+			<onclick>ActivateWindow(ShutdownMenu)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>ButtonHomeSubCommonValues</include>
 			<label>5</label>
 			<onclick>ActivateWindow(Settings)</onclick>
 		</control>
-		<control type="button" id="90123">
+		<control type="button" id="90124">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</control>
-		<control type="button" id="90124">
+		<control type="button" id="90125">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>13200</label>
 			<onclick>ActivateWindow(Profiles)</onclick>
 		</control>
-		<control type="button" id="90125">
+		<control type="button" id="90126">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
 		</control>
-		<control type="image" id="90126">
+		<control type="image" id="90127">
 			<width>35</width>
 			<height>35</height>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
@@ -239,6 +244,97 @@
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 		</control>
 		<control type="image" id="90146">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuShutdown">
+		<control type="image" id="90181">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90182">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13009</label>
+			<onclick>XBMC.Quit()</onclick>
+		</control>
+		<control type="button" id="90183">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13005</label>
+			<onclick>XBMC.Shutdown()</onclick>
+		</control>
+		<control type="button" id="90184">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13011</label>
+			<onclick>XBMC.Suspend()</onclick>
+		</control>
+		<control type="button" id="90185">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13013</label>
+			<onclick>XBMC.Reset()</onclick>
+		</control>
+		<control type="button" id="90186">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90187">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>5</label>
+			<onclick>SetProperty(MenuItemActive,Settings,Home)</onclick>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</control>
+		<control type="image" id="90188">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuFavourites">
+		<control type="image" id="90191">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90192">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Window(0).Property(favourite.1.name)]</label>
+			<onclick>$INFO[Window(0).Property(favourite.1.path)]</onclick>
+			<visible>!IsEmpty(Window(0).Property(favourite.1.name))</visible>
+			<visible>!IsEmpty(Window(0).Property(favourite.1.path))</visible>
+			<visible>!StringCompare(Window(0).Property(favourite.1.name),Can Not Find favourites.xml)</visible>
+		</control>
+		<control type="button" id="90193">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Window(0).Property(favourite.2.name)]</label>
+			<onclick>$INFO[Window(0).Property(favourite.2.path)]</onclick>
+			<visible>!IsEmpty(Window(0).Property(favourite.2.name))</visible>
+			<visible>!IsEmpty(Window(0).Property(favourite.2.path))</visible>
+		</control>
+		<control type="button" id="90194">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Window(0).Property(favourite.3.name)]</label>
+			<onclick>$INFO[Window(0).Property(favourite.3.path)]</onclick>
+			<visible>!IsEmpty(Window(0).Property(favourite.3.name))</visible>
+			<visible>!IsEmpty(Window(0).Property(favourite.3.path))</visible>
+		</control>
+		<control type="button" id="90195">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Window(0).Property(favourite.4.name)]</label>
+			<onclick>$INFO[Window(0).Property(favourite.4.path)]</onclick>
+			<visible>!IsEmpty(Window(0).Property(favourite.4.name))</visible>
+			<visible>!IsEmpty(Window(0).Property(favourite.4.path))</visible>
+		</control>
+		<control type="button" id="90196">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Window(0).Property(favourite.5.name)]</label>
+			<onclick>$INFO[Window(0).Property(favourite.5.path)]</onclick>
+			<visible>!IsEmpty(Window(0).Property(favourite.5.name))</visible>
+			<visible>!IsEmpty(Window(0).Property(favourite.5.path))</visible>
+		</control>
+		<control type="image" id="90197">
 			<width>35</width>
 			<height>35</height>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>

@@ -9,7 +9,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="group">
 				<!-- Videos and Movies -->
-				<visible>Library.HasContent(Movies) + !Skin.HasSetting(HideHomeMedia)</visible>
+				<visible>Library.HasContent(Movies) + !Skin.HasSetting(HideHomeMediaPanel)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Label2,Movies)</visible>
 				<include>VisibleFadeEffect</include>
 				<posx>215</posx>
@@ -21,7 +21,7 @@
 					<width>850</width>
 					<height>470</height>
 					<texture border="20">ContentPanel.png</texture>
-					<colordiffuse>1FFFFFFF</colordiffuse>
+					<colordiffuse>6FFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -44,6 +44,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>IsEmpty(Window(home).Property(Watchlist_Control)) | IsEmpty(Window(home).Property(WatchList_Movie.1.Label))</visible>
+					<visible>!Control.HasFocus(8000)</visible>
 				</control>
 				<control type="label">
 					<description>Title label</description>
@@ -58,6 +59,21 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>!IsEmpty(Window(home).Property(Watchlist_Control)) + !IsEmpty(Window(home).Property(WatchList_Movie.1.Label))</visible>
+					<visible>!Control.HasFocus(8000)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>18</posy>
+					<height>20</height>
+					<width>830</width>
+					<label>$INFO[Container(9000).ListItem.Label] - $INFO[Container(8000).ListItem.Label]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8000)</visible>
 				</control>
 				<control type="panel" id="8000">
 					<posx>90</posx>
@@ -144,7 +160,7 @@
 			</control>
 			<control type="group">
 			<!-- TV Shows -->
-				<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HideHomeMedia)</visible>
+				<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HideHomeMediaPanel)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Label2,TVShows)</visible>
 				<include>VisibleFadeEffect</include>
 				<posx>215</posx>
@@ -156,7 +172,7 @@
 					<width>850</width>
 					<height>370</height>
 					<texture border="20">ContentPanel.png</texture>
-					<colordiffuse>1FFFFFFF</colordiffuse>
+					<colordiffuse>6FFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -179,6 +195,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>IsEmpty(Window(home).Property(Watchlist_Control)) | IsEmpty(Window(home).Property(WatchList_Episode.1.Label))</visible>
+					<visible>!Control.HasFocus(8001)</visible>
 				</control>
 				<control type="label">
 					<description>Title label</description>
@@ -193,6 +210,21 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>!IsEmpty(Window(home).Property(Watchlist_Control)) + !IsEmpty(Window(home).Property(WatchList_Episode.1.Label))</visible>
+					<visible>!Control.HasFocus(8001)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>18</posy>
+					<height>20</height>
+					<width>830</width>
+					<label>$INFO[Container(8001).ListItem.Label] - $INFO[Container(8001).ListItem.Label2]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8001)</visible>
 				</control>
 				<control type="panel" id="8001">
 					<posx>25</posx>
@@ -263,7 +295,7 @@
 			</control>		
 			<control type="group">
 				<!-- Music -->
-				<visible>Library.HasContent(Music) + !Skin.HasSetting(HideHomeMedia)</visible>
+				<visible>Library.HasContent(Music) + !Skin.HasSetting(HideHomeMediaPanel)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Label2,Music)</visible>
 				<include>VisibleFadeEffect</include>
 				<posx>215</posx>
@@ -275,7 +307,7 @@
 					<width>885</width>
 					<height>370</height>
 					<texture border="20">ContentPanel.png</texture>
-					<colordiffuse>1FFFFFFF</colordiffuse>
+					<colordiffuse>6FFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -298,6 +330,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>IsEmpty(Window(home).Property(Watchlist_Control)) | IsEmpty(Window(home).Property(WatchList_Album.1.Label))</visible>
+					<visible>!Control.HasFocus(8002)</visible>
 				</control>
 				<control type="label">
 					<description>Title label</description>
@@ -312,6 +345,21 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>!IsEmpty(Window(home).Property(Watchlist_Control)) + !IsEmpty(Window(home).Property(WatchList_Album.1.Label))</visible>
+					<visible>!Control.HasFocus(8002)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>18</posy>
+					<height>20</height>
+					<width>830</width>
+					<label>$INFO[Container(8002).ListItem.Label2] - $INFO[Container(8002).ListItem.Label]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8002)</visible>
 				</control>
 				<control type="panel" id="8002">
 					<posx>25</posx>
@@ -378,7 +426,7 @@
 			</control>		
 			<control type="group">
 				<!-- Concerts -->
-				<visible>Library.HasContent(MusicVideos) + !Skin.HasSetting(HideHomeMedia) + !IsEmpty(Window.Property(LatestMusicVideo.1.Title))</visible>
+				<visible>Library.HasContent(MusicVideos) + !Skin.HasSetting(HideHomeMediaPanel) + !IsEmpty(Window.Property(LatestMusicVideo.1.Title))</visible>
 				<visible>StringCompare(Container(9000).ListItem.Label2,Concerts)</visible>
 				<include>VisibleFadeEffect</include>
 				<posx>215</posx>
@@ -390,7 +438,7 @@
 					<width>850</width>
 					<height>470</height>
 					<texture border="20">ContentPanel.png</texture>
-					<colordiffuse>1FFFFFFF</colordiffuse>
+					<colordiffuse>6FFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -412,6 +460,21 @@
 					<font>font13_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8003)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>18</posy>
+					<height>20</height>
+					<width>830</width>
+					<info>Container(8003).ListItem.Label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8003)</visible>
 				</control>
 				<control type="panel" id="8003">
 					<posx>90</posx>
@@ -496,7 +559,7 @@
 				</control>	
 			</control>
 			<control type="group">
-				<visible>!Skin.HasSetting(HideHomeMedia) + !Skin.HasSetting(HideWatchPlaylist) + System.HasAddon(script.randomandlastitems) + StringCompare(Container(9000).ListItem.Label2,Playlist)</visible>
+				<visible>!Skin.HasSetting(HideHomeMediaPanel) + !Skin.HasSetting(HideWatchPlaylist) + System.HasAddon(script.randomandlastitems) + StringCompare(Container(9000).ListItem.Label2,Playlist)</visible>
 				<control type="group">
 					<!-- Music Playlist -->
 					<visible>
@@ -521,7 +584,7 @@
 						<width>885</width>
 						<height>370</height>
 						<texture border="20">ContentPanel.png</texture>
-						<colordiffuse>1FFFFFFF</colordiffuse>
+						<colordiffuse>6FFFFFFF</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -544,6 +607,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8004)</visible>
 					</control>
 					<control type="label">
 						<description>Recent Title label</description>
@@ -558,6 +622,21 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8004)</visible>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>10</posx>
+						<posy>18</posy>
+						<height>20</height>
+						<width>830</width>
+						<label>$INFO[Container(8004).ListItem.Label2] - $INFO[Container(8004).ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>Control.HasFocus(8004)</visible>
 					</control>
 					<control type="panel" id="8004">
 						<posx>25</posx>
@@ -645,7 +724,7 @@
 						<width>850</width>
 						<height>470</height>
 						<texture border="20">ContentPanel.png</texture>
-						<colordiffuse>1FFFFFFF</colordiffuse>
+						<colordiffuse>6FFFFFFF</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -668,6 +747,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8005)</visible>
 					</control>
 					<control type="label">
 						<description>Recent Title label</description>
@@ -675,13 +755,28 @@
 						<posy>18</posy>
 						<height>20</height>
 						<width>830</width>
-						<label>$INFO[Container(9000).ListItem.Label] $LOCALIZE[31980] </label>
+						<label>$INFO[Container(9000).ListItem.Label] $LOCALIZE[31980]</label>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13_title</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8005)</visible>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>10</posx>
+						<posy>18</posy>
+						<height>20</height>
+						<width>830</width>
+						<label>$INFO[Container(9000).ListItem.Label] - $INFO[Container(8005).ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>Control.HasFocus(8005)</visible>
 					</control>
 					<control type="panel" id="8005">
 						<posx>90</posx>
@@ -789,7 +884,7 @@
 						<width>850</width>
 						<height>370</height>
 						<texture border="20">ContentPanel.png</texture>
-						<colordiffuse>1FFFFFFF</colordiffuse>
+						<colordiffuse>6FFFFFFF</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -812,6 +907,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8006)</visible>
 					</control>
 					<control type="label">
 						<description>Recent Title label</description>
@@ -826,6 +922,21 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>Skin.HasSetting(UseLastNotRandom)</visible>
+						<visible>!Control.HasFocus(8006)</visible>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>10</posx>
+						<posy>18</posy>
+						<height>20</height>
+						<width>830</width>
+						<label>$INFO[Container(8006).ListItem.Label2] - $INFO[Container(8006).ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>Control.HasFocus(8006)</visible>
 					</control>
 					<control type="panel" id="8006">
 						<posx>25</posx>

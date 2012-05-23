@@ -271,7 +271,7 @@
 				</control>
 			</control>
 		</control>
-		<include condition="!Skin.HasSetting(HideHomeMedia)">HomeContentPanelInfo</include>
+		<include condition="!Skin.HasSetting(HideHomeMediaPanel)">HomeContentPanelInfo</include>
 		<control type="button" id="9003">
 			<description>Hidden Button to pass through navigation when recently added is disabled</description>
 			<posx>-20</posx>
@@ -527,10 +527,24 @@
 				</control>
 				<control type="grouplist" id="9014">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
+					<onleft>9014</onleft>
+					<onright>9014</onright>
 					<visible>StringCompare(Container(9000).ListItem.Label2,Pictures)</visible>
 					<include>HomeSubMenuPictures</include> 
+				</control>
+				<control type="grouplist" id="9015">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9015</onleft>
+					<onright>9015</onright>
+					<visible>StringCompare(Container(9000).ListItem.Label2,Shutdown)</visible>
+					<include>HomeSubMenuShutdown</include> 
+				</control>
+				<control type="grouplist" id="9016">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9016</onleft>
+					<onright>9016</onright>
+					<visible>StringCompare(Container(9000).ListItem.Label2,Favourite)</visible>
+					<include>HomeSubMenuFavourites</include> 
 				</control>
 			</control>
 			<control type="image">
@@ -550,7 +564,6 @@
 			<control type="button" id="8999">
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-				<!--
 				<onfocus>Skin.SetString(HomeItemOneLabel,$LOCALIZE[8])</onfocus>
 				<onfocus>Skin.SetString(HomeItemOneWidget,Weather)</onfocus>	
 				<onfocus>Skin.SetString(HomeItemOneAction,ActivateWindow(Weather))</onfocus>
@@ -569,7 +582,6 @@
 				<onfocus>Skin.SetString(HomeItemSixLabel,$LOCALIZE[427])</onfocus>
 				<onfocus>Skin.SetString(HomeItemSixWidget,DiscMedia)</onfocus>	
 				<onfocus>Skin.SetString(HomeItemSixAction,XBMC.PlayDVD())</onfocus>
-				-->
 				<onfocus>Skin.SetBool(InitialSetUpRun)</onfocus>
 				<onfocus>SetFocus(9000)</onfocus>
 				<visible>!Skin.HasSetting(InitialSetUpRun)</visible>

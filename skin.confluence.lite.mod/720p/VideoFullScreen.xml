@@ -6,6 +6,41 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
 				<posx>0</posx>
+				<posy>-150</posy>
+				<width>1280</width>
+				<height>256</height>
+				<texture flipy="true">HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Count Header label</description>
+				<posx>30</posx>
+				<posy>5</posy>
+				<width>1000</width>
+				<height>25</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName,[COLOR=grey] - (,)[/COLOR]]</label>
+				<visible>Player.ChapterCount</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Clock label</description>
+				<posx>1250</posx>
+				<posy>5</posy>
+				<width>800</width>
+				<height>25</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Time]</label>
+				<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Window.IsVisible(VideoOSD)">conditional</animation>
+			</control>
+			<control type="image" id="1">
+				<posx>0</posx>
 				<posy>230r</posy>
 				<width>1280</width>
 				<height>230</height>
@@ -184,20 +219,6 @@
 					<visible>!Window.IsVisible(VideoOSD)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
-				<control type="label" id="1">
-					<description>Chapter Count Header label</description>
-					<posx>0</posx>
-					<posy>35r</posy>
-					<width>580</width>
-					<height>25</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName,[COLOR=grey] - (,)[/COLOR]]</label>
-					<visible>Player.ChapterCount + !Window.IsVisible(VideoOSD)</visible>
-				</control>			
 			</control>
 			<control type="group" id="1">
 				<visible>!Window.IsActive(script.pseudotv.TVOverlay.xml)</visible>

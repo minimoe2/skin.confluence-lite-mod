@@ -1728,53 +1728,53 @@
 					<itemgap>-1</itemgap>
 					<pagecontrol>-</pagecontrol>
 					<onleft>9000</onleft>
-					<onright>61</onright>
+					<onright>62</onright>
 					<onup>9005</onup>
 					<ondown>9005</ondown>
 					<control type="label" id="500">
-							<width>750</width>
-							<height>45</height>
-							<font>font13_title</font>
-							<label>31140</label>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="button" id="501">
-							<width>750</width>
-							<height>35</height>
-							<font>font12</font>
-							<label>$LOCALIZE[31132]</label>
-							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
-						</control>
-						<control type="label" id="502">
-							<width>750</width>
-							<height>45</height>
-							<font>font13_title</font>
-							<label>31141</label>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="button" id="503">
-							<width>750</width>
-							<height>35</height>
-							<font>font12</font>
-							<label>$LOCALIZE[31133]</label>
-							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-						</control>
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31140</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="501">
+						<width>750</width>
+						<height>35</height>
+						<font>font12</font>
+						<label>$LOCALIZE[31132]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+					</control>
+					<control type="label" id="502">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31141</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="503">
+						<width>750</width>
+						<height>35</height>
+						<font>font12</font>
+						<label>$LOCALIZE[31133]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+					</control>
 				</control>
 			</control>
 		</control>

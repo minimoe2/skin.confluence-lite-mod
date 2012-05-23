@@ -229,7 +229,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>250r</posx>
+			<posx>450r</posx>
 			<posy>50r</posy>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
