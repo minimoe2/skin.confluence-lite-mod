@@ -1,47 +1,77 @@
 <includes>
 	<include name="CommonBackground">
-		<control type="Image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture fallback="special://skin/backgrounds/background.jpg">special://skin/backgrounds/$INFO[Skin.CurrentTheme].jpg</texture>
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include> 
+			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Window.IsActive(home) + !Player.HasVideo + !Player.HasAudio</visible>
+		</control>
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include> 
+			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Window.IsActive(home) + Player.HasAudio + [IsEmpty(MusicPlayer.Property(Fanart_Image)) | Skin.HasSetting(HideBackGroundFanart)]</visible>
+		</control>
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include> 
+			<imagepath background="true">$VAR[CommonScreenBackground]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>!Window.IsActive(home) + !Player.HasVideo + !Player.HasAudio</visible>
+		</control>	
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include> 
+			<imagepath background="true">$VAR[CommonScreenBackground]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>!Window.IsActive(home) + Player.HasAudio + [IsEmpty(MusicPlayer.Property(Fanart_Image)) | Skin.HasSetting(HideBackGroundFanart)]</visible>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+			<include>Dimensions_Fullscreen</include> 
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			<include>Window_OpenClose_Animation</include>
-			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + ![Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)]</visible>
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<visible>!Player.HasAudio |[Player.HasAudio + SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]</visible>
+			<visible>!Player.HasVideo</visible>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
-			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+			<include>Dimensions_Fullscreen</include> 
+			<texture background="true">$INFO[Fanart.Image]</texture>
+			<animation effect="fade" time="600" delay="3000">Hidden</animation>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(Fanart.Image)</visible>
+			<visible>!Player.HasAudio |[Player.HasAudio + SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]</visible>
+			<visible>!Player.HasVideo + StringCompare(ListItem.Label,..) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include> 
+			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include> 
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<!--include>Window_OpenClose_Animation</include-->
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(MusicPlayer.Property(Fanart_Image)) + Player.HasAudio</visible>
+		</control>	
 		<control type="visualisation">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)</visible>
-			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+			<include>Dimensions_Fullscreen</include> 
+			<visible>Player.HasAudio</visible>
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
 		</control>
 		<control type="videowindow">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+			<include>Dimensions_Fullscreen</include> 
+			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -49,7 +79,7 @@
 			<width>1280</width>
 			<height>120</height>
 			<texture flipy="true">HomeNowPlayingBack.png</texture>
-			<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
+			<visible>Player.HasVideo | Player.HasAudio | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
 			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
 		</control>
 	</include>
@@ -60,8 +90,8 @@
 			<width>1280</width>
 			<height>100</height>
 			<texture>floor.png</texture>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(home)">WindowClose</animation>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -243,6 +273,24 @@
 					<posx>550</posx>
 					<posy>652</posy>
 					<width>680</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(724) | Control.IsVisible(733)</visible>
+				<control type="image">
+					<posx>30</posx>
+					<posy>420</posy>
+					<width>1240</width>
+					<height>240</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>652</posy>
+					<width>1240</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>

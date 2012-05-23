@@ -486,7 +486,7 @@
 					<posy>480</posy>
 					<width>160</width>
 					<height>160</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(50).Listitem.Icon]</texture>
+					<texture fallback="FallBackAlbumCover.png">$INFO[Container(50).Listitem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>
 				</control>

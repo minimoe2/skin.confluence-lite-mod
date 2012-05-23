@@ -125,7 +125,7 @@
 				<width>180</width>
 				<height>180</height>
 				<aspectratio aligny="bottom">stretch</aspectratio>
-				<texture  fallback="DefaultAlbumCover.png" diffuse="/CDCase/cdcase-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+				<texture  fallback="FallBackAlbumCover.png" diffuse="/CDCase/cdcase-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 			</control>
 			<control type="image">
 				<description>CD Case</description>
@@ -173,7 +173,7 @@
 						<width>90</width>
 						<height>35</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[MusicPlayer.Codec,MediaFlags/audio/,.png]</texture>
+						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
 					</control>
 					<control type="image">
 						<description>Rating</description>

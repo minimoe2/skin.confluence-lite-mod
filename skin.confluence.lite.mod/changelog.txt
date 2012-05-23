@@ -1,15 +1,27 @@
-[[B]1.0.4[/B] [I]Apr 2012[/I]
+[B]1.0.5[/B] [I]May 2012[/I]
+- Added Low List view to Videos and Music
+- Bugfix Some Home Screen Thumbs not visible
+- Bugfix ReCoded main menu addon section
+- Bugfix Renamed background.jpg to Skin default.jpg
+- Updated Skin Settings to accomodate new settings
+- Added ability to change backgrounds
+- Changed recent items to panel type layout
+- Removed user addons from home screen
+- Lowered menu bar
+- Introduced Media OSD Screens from Convergence
+
+[B]1.0.4[/B] [I]Apr 2012[/I]
 - Bugfix Setting for weather icon on home screen
 - Added CD Wall to Music Visualization (From Transparency)
 - Added Setting to Hide Artist Slideshow from Music Viz
 - Added to mudisle.repo
 - Added required "script.tvtunes" "script.watchlist" "script.globalsearch" "script.randomandlastitems"
 
-[[B]1.0.3[/B] [I]Apr 2012[/I]
+[B]1.0.3[/B] [I]Apr 2012[/I]
 - Bugfix Suggested Albums not playing
 - Enabled code Jezz had hidden for weather icon on home screen
 
-B]1.0.2[/B] [I]Apr 2012[/I]
+[B]1.0.2[/B] [I]Apr 2012[/I]
 - Added Recently Added Music Videos
 - Added support for script.randomandlastitems if installed
 - Added support for script.watchlist if installed

@@ -1,18 +1,6 @@
 <window id="0">
-	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
-	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
-	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">SetProperty(Watchlist_Control,True)</onload>  
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemOnePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemOnePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListOne)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTwoPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTwoPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTwo)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemThreePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemThreePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListThree)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemFourPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFourPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFour)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemFivePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFivePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFive)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemSixPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSixPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSix)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemSevenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSevenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSeven)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemEightPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemEightPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListEight)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemNinePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemNinePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListNine)</onload>
-	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTen)</onload>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="!IsEmpty(Window(home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
+	<defaultcontrol always="true">8999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
 		<include>CommonBackground</include>
@@ -22,8 +10,8 @@
 			<width>1280</width>
 			<height>90</height>
 			<texture>floor.png</texture>
-			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="fade" time="250" condition="Window.Previous(home)">WindowOpen</animation>
+			<animation effect="fade" time="250" condition="Window.Next(home)">WindowClose</animation>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
@@ -40,25 +28,53 @@
 		<!-- Music Info -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>60</posy>
-			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<posy>230</posy>
+			<visible>Player.HasAudio</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="-1000,0" end="0,0" time="1200" delay="500" condition="Player.HasMedia">conditional</animation>
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>86</posx>
+				<posy>206</posy>
+				<animation effect="slide" start="-70,0" end="0,0" time="900" delay="2000" condition="Player.HasMedia">conditional</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>125</width>
+				<height>125</height>
+				<texture fallback="DefaultCDArt.png">$INFO[Player.FolderPath]cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Player.HasAudio</visible>
+			</control>
 			<control type="image">
 				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>130</width>
-				<height>295</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
+				<posx>18</posx>
+				<posy>200</posy>
+				<width>132</width>
+				<height>134</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
 				<texture>$INFO[MusicPlayer.Cover]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
+			</control>
+			<control type="image">
+				<description>CD Case</description>
+				<posx>5</posx>
+				<posy>198</posy>
+				<width>148</width>
+				<height>137</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<texture>CDCase/cdcase.png</texture>
+			</control>	
+			<control type="image">
+				<posx>5</posx>
+				<posy>117</posy>
+				<width>200</width>
+				<height>78</height>
+				<texture fallback="DefaultNoImage.png">$INFO[Player.FolderPath,,../logo.png]</texture>
+				<aspectratio align="bottom">keep</aspectratio>
 			</control>
 			<control type="label">
 				<description>Album Label</description>
-				<posx>170</posx>
-				<posy>265</posy>
+				<posx>215</posx>
+				<posy>250</posy>
 				<height>25</height>
 				<width>1000</width>
 				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
@@ -70,8 +86,8 @@
 			</control>
 			<control type="label">
 				<description>Title label</description>
-				<posx>170</posx>
-				<posy>285</posy>
+				<posx>215</posx>
+				<posy>270</posy>
 				<height>30</height>
 				<width>1000</width>
 				<label>$INFO[MusicPlayer.Title]</label>
@@ -83,8 +99,8 @@
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<posx>170</posx>
-				<posy>310</posy>
+				<posx>215</posx>
+				<posy>295</posy>
 				<height>30</height>
 				<width>300</width>
 				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -99,7 +115,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>50</posy>
-			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
+			<visible>Player.HasVideo</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<control type="group">
@@ -107,7 +123,7 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>20</posx>
-					<posy>45</posy>
+					<posy>215</posy>
 					<width>120</width>
 					<height>300</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
@@ -118,7 +134,7 @@
 				<control type="label">
 					<description>Title label</description>
 					<posx>160</posx>
-					<posy>285</posy>
+					<posy>450</posy>
 					<height>30</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.Title]</label>
@@ -131,7 +147,7 @@
 				<control type="label">
 					<description>Time Label</description>
 					<posx>160</posx>
-					<posy>310</posy>
+					<posy>475</posy>
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -146,19 +162,25 @@
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<control type="image">
 					<description>Cover image</description>
-					<posx>20</posx>
-					<posy>45</posy>
-					<width>120</width>
-					<height>300</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.Cover]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
+					<posx>30</posx>
+					<posy>285</posy>
+					<width>160</width>
+					<height>225</height>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<texture background="true" diffuse="EmptyCaseMask.png">$INFO[VideoPlayer.Cover]</texture>
 				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>275</posy>
+					<width>194</width>
+					<height>245</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
+				</control>	
 				<control type="label">
 					<description>Studio label</description>
-					<posx>160</posx>
-					<posy>265</posy>
+					<posx>205</posx>
+					<posy>430</posy>
 					<height>25</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.Studio]</label>
@@ -170,8 +192,8 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>160</posx>
-					<posy>285</posy>
+					<posx>205</posx>
+					<posy>450</posy>
 					<height>30</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
@@ -183,8 +205,8 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<posx>160</posx>
-					<posy>310</posy>
+					<posx>205</posx>
+					<posy>475</posy>
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -200,7 +222,7 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>20</posx>
-					<posy>225</posy>
+					<posy>395</posy>
 					<width>180</width>
 					<height>120</height>
 					<aspectratio>scale</aspectratio>
@@ -211,7 +233,7 @@
 				<control type="label">
 					<description>TV Show Season Ep Label</description>
 					<posx>210</posx>
-					<posy>265</posy>
+					<posy>430</posy>
 					<height>25</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.TVShowTitle] ($LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode])</label>
@@ -224,7 +246,7 @@
 				<control type="label">
 					<description>Title label</description>
 					<posx>210</posx>
-					<posy>285</posy>
+					<posy>450</posy>
 					<height>30</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.Title]</label>
@@ -237,7 +259,7 @@
 				<control type="label">
 					<description>Time Label</description>
 					<posx>210</posx>
-					<posy>310</posy>
+					<posy>475</posy>
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -249,7 +271,7 @@
 				</control>
 			</control>
 		</control>
-		<include condition="!Skin.HasSetting(HomepageHideRecentlyAddedVideo) | !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)">HomeRecentlyAddedInfo</include>
+		<include condition="!Skin.HasSetting(HideHomeMedia)">HomeContentPanelInfo</include>
 		<control type="button" id="9003">
 			<description>Hidden Button to pass through navigation when recently added is disabled</description>
 			<posx>-20</posx>
@@ -269,7 +291,7 @@
 		<control type="group">
 			<description>Controls for currently playing media</description>
 			<posx>545r</posx>
-			<posy>370</posy>
+			<posy>530</posy>
 			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia">conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -447,7 +469,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posy>400</posy>
+			<posy>560</posy>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -460,7 +482,7 @@
 				<posx>0</posx>
 				<posy>70</posy>
 				<onup>9000</onup>
-				<ondown>9002</ondown>
+				<ondown>20</ondown>				
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -493,7 +515,7 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
-					<visible>Container(9000).HasFocus(12)</visible>
+					<visible>Container(9000).HasFocus(11)</visible>
 					<include>HomeSubMenuSystem</include> 
 				</control>
 				<control type="grouplist" id="9013">
@@ -525,6 +547,55 @@
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
 			</control>
+			<control type="button" id="8999">
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<!--
+				<onfocus>Skin.SetString(HomeItemOneLabel,$LOCALIZE[8])</onfocus>
+				<onfocus>Skin.SetString(HomeItemOneWidget,Weather)</onfocus>	
+				<onfocus>Skin.SetString(HomeItemOneAction,ActivateWindow(Weather))</onfocus>
+				<onfocus>Skin.SetString(HomeItemTwoLabel,$LOCALIZE[1])</onfocus>
+				<onfocus>Skin.SetString(HomeItemTwoWidget,Pictures)</onfocus>
+				<onfocus>Skin.SetString(HomeItemTwoAction,ActivateWindow(Pictures))</onfocus>
+				<onfocus>Skin.SetString(HomeItemThreeLabel,$LOCALIZE[3])</onfocus>
+				<onfocus>Skin.SetString(HomeItemThreeWidget,Videos)</onfocus>
+				<onfocus>Skin.SetString(HomeItemThreeAction,ActivateWindow(Videos,Root,return))</onfocus>
+				<onfocus>Skin.SetString(HomeItemFourLabel,$LOCALIZE[2])</onfocus>
+				<onfocus>Skin.SetString(HomeItemFourWidget,Music)</onfocus>	
+				<onfocus>Skin.SetString(HomeItemFourAction,ActivateWindow(Music))</onfocus>	
+				<onfocus>Skin.SetString(HomeItemFiveLabel,$LOCALIZE[0])</onfocus>
+				<onfocus>Skin.SetString(HomeItemFiveWidget,Programs)</onfocus>	
+				<onfocus>Skin.SetString(HomeItemFiveAction,ActivateWindow(Programs,Addons,return))</onfocus>	
+				<onfocus>Skin.SetString(HomeItemSixLabel,$LOCALIZE[427])</onfocus>
+				<onfocus>Skin.SetString(HomeItemSixWidget,DiscMedia)</onfocus>	
+				<onfocus>Skin.SetString(HomeItemSixAction,XBMC.PlayDVD())</onfocus>
+				-->
+				<onfocus>Skin.SetBool(InitialSetUpRun)</onfocus>
+				<onfocus>SetFocus(9000)</onfocus>
+				<visible>!Skin.HasSetting(InitialSetUpRun)</visible>
+			</control>
+			<control type="button" id="8999">
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onfocus condition="System.HasAddon(script.watchlist) + !Skin.HasSetting(HideWatchlist) + !Skin.HasSetting(HideHomeMediaPanel) + IsEmpty(Window(home).Property(Watchlist_Control))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onfocus>
+				<onfocus condition="System.HasAddon(script.watchlist) + !Skin.HasSetting(HideWatchlist) + !Skin.HasSetting(HideHomeMediaPanel) + IsEmpty(Window(home).Property(Watchlist_Control))">SetProperty(Watchlist_Control,True)</onfocus>
+				<onfocus condition="System.HasAddon(script.watchlist) + Skin.HasSetting(HideWatchlist) + !IsEmpty(Window(home).Property(WatchList_Running))">ClearProperty(WatchList_Running,Home)</onfocus>
+				<onfocus condition="System.HasAddon(script.watchlist) + Skin.HasSetting(HideWatchlist) + !IsEmpty(Window(home).Property(Watchlist_Control))">ClearProperty(Watchlist_Control,Home)</onfocus>
+				<onfocus condition="System.HasAddon(script.favourites) + Skin.HasSetting(FavPlaysPlayList)">XBMC.RunScript(script.favourites,playlists=play)</onfocus>
+				<onfocus condition="System.HasAddon(script.favourites) + !Skin.HasSetting(FavPlaysPlayList)">XBMC.RunScript(script.favourites)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemOnePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemOnePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListOne)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemTwoPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTwoPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTwo)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemThreePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemThreePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListThree)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemFourPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFourPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFour)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemFivePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemFivePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListFive)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemSixPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSixPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSix)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemSevenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemSevenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListSeven)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemEightPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemEightPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListEight)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemNinePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemNinePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListNine)</onfocus>
+				<onfocus condition="System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideWatchPlaylist) + !IsEmpty(Skin.String(HomeItemTenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTen)</onfocus>
+				<onfocus>SetFocus(9000)</onfocus>
+				<visible>Skin.HasSetting(InitialSetUpRun)</visible>
+			</control>	
 			<control type="fixedlist" id="9000">
 				<posx>-110</posx>
 				<posy>5</posy>
@@ -610,109 +681,112 @@
 					<item id="1">
 						<description>Home Menu Item One</description>
 						<label>$INFO[Skin.String(HomeItemOneLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemOne,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemOneAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemOneBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemOneWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemOneAction))</visible>
 					</item>
 					<item id="2">
 						<description>Home Menu Item Two</description>
 						<label>$INFO[Skin.String(HomeItemTwoLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemTwo,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemTwoAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemTwoBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemTwoWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemTwoAction))</visible>
 					</item>
 					<item id="3">
 						<description>Home Menu Item Three</description>
 						<label>$INFO[Skin.String(HomeItemThreeLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemThree,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemThreeAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemThreeBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemThreeWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemThreeAction))</visible>
 					</item>
 					<item id="4">
 						<description>Home Menu Item Four</description>
 						<label>$INFO[Skin.String(HomeItemFourLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemFour,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemFourAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemFourBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemFourWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemFourAction))</visible>
 					</item>
 					<item id="5">
 						<description>Home Menu Item Five</description>
 						<label>$INFO[Skin.String(HomeItemFiveLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemFive,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemFiveAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemFiveBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemFiveWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemFiveAction))</visible>
 					</item>
 					<item id="6">
 						<description>Home Menu Item Six</description>
 						<label>$INFO[Skin.String(HomeItemSixLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemSix,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemSixAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemSixBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemSixWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemSixAction))</visible>
 					</item>
 					<item id="7">
 						<description>Home Menu Item Seven</description>
 						<label>$INFO[Skin.String(HomeItemSevenLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemSeven,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemSevenAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemSevenBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemSevenWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemSevenAction))</visible>
 					</item>
 					<item id="8">
 						<description>Home Menu Item Eight</description>
 						<label>$INFO[Skin.String(HomeItemEightLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemEight,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemEightAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemEightBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemEightWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemEightAction))</visible>
 					</item>
 					<item id="9">
 						<description>Home Menu Item Nine</description>
 						<label>$INFO[Skin.String(HomeItemNineLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemNine,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemNineAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemNineBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemNineWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemNineAction))</visible>
 					</item>
 					<item id="10">
 						<description>Home Menu Item Ten</description>
 						<label>$INFO[Skin.String(HomeItemTenLabel)]</label>
+						<onclick>SetProperty(MenuItemActive,ItemTen,Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeItemTenAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeItemTenBackground)]</thumb>
 						<label2>$INFO[Skin.String(HomeItemTenWidget)]</label2>
 						<visible>!IsEmpty(Skin.String(HomeItemTenAction))</visible>
 					</item>
 					<item id="11">
-						<description>Home Menu Item Eleven</description>
-						<label>$INFO[Skin.String(HomeItemElevenLabel)]</label>
-						<onclick>$INFO[Skin.String(HomeItemElevenAction)]</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
-						<label2>$INFO[Skin.String(HomeItemElevenWidget)]</label2>
-						<visible>!IsEmpty(Skin.String(HomeItemElevenAction))</visible>
-					</item>
-					<item id="12">
 						<description>Home Menu Settings</description>
-						<label>13000</label>
+						<label>$LOCALIZE[13000]</label>
+						<onclick>SetProperty(MenuItemActive,Settings,Home)</onclick>
 						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon>$VAR[CommonScreenBackground]</icon>
+						<thumb>$INFO[Skin.String(HomeSystemBackground)]</thumb>
 						<label2>$LOCALIZE[5]</label2>
+						<visible>!Skin.HasSetting(HideHomeMenuSystem)</visible>
 					</item>
 				</content>
 			</control>
@@ -729,58 +803,6 @@
 				<width>128</width>
 				<height>60</height>
 				<texture flipx="true">SideFade.png</texture>
-			</control>
-		</control>
-		<control type="group" id="9002">
-			<onup>9001</onup>
-			<ondown>20</ondown>
-			<control type="fixedlist" id="700">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Label2,Videos) | StringCompare(Container(9000).ListItem.Label2,Movies) | StringCompare(Container(9000).ListItem.Label2,TVShows)</visible>	
-				<onleft>700</onleft>
-				<onright>700</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsVideos</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="703">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(703).NumItems,2) | StringCompare(Container(703).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Label2,Music)</visible>
-				<onleft>703</onleft>
-				<onright>703</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsMusic</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="704">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(704).NumItems,2) | StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Label2,Pictures)</visible>
-				<onleft>704</onleft>
-				<onright>704</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsPictures</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="705">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(705).NumItems,2) | StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Label2,Programs)</visible>
-				<onleft>705</onleft>
-				<onright>705</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsPrograms</include>
-				</content>
 			</control>
 		</control>
 		<control type="group">
@@ -827,7 +849,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
 				<onright>21</onright>
-				<onup>9002</onup>
+				<onup>9001</onup>				
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
@@ -853,7 +875,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>20</onleft>
 				<onright>20</onright>
-				<onup>9002</onup>
+				<onup>9001</onup>				
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
