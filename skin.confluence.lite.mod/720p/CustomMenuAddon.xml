@@ -1,0 +1,277 @@
+<window type="dialog" id="2114">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<posx>400r</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<posx>380r</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="label">
+	            <posx>380r</posx>
+	            <posy>35</posy>
+	            <width>360</width>
+	            <height>40</height>
+	            <font>font13_title</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+                <label>$LOCALIZE[31952]</label>
+			</control>
+			<control type="list" id="450">
+                <posx>390r</posx>
+                <posy>90</posy>
+                <width>450</width>
+      			<height>600</height>
+				<onup>450</onup>
+                <onleft>Dialog.Close(2114)</onleft>
+                <onright>450</onright>
+                <ondown>450</ondown>
+                <pagecontrol>-</pagecontrol>
+                <scrolltime>200</scrolltime>
+				<itemlayout height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>370</width>
+                        <height>40</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <posy>0</posy>
+                        <width>350</width>
+                        <height>40</height>
+                        <font>font12_title</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <selectedcolor>selected</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="40">
+                    <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>40</height>
+	                     <visible>!Control.HasFocus(450)</visible>
+	                     <texture border="3">button-nofocus.png</texture>
+	                </control>
+	                <control type="image">
+	                    <posx>0</posx>
+	                    <posy>0</posy>
+	                    <width>370</width>
+	                    <height>40</height>
+	                    <visible>Control.HasFocus(450)</visible>
+	                    <texture border="3">button-focus.png</texture>
+	                </control>
+	                <control type="label">
+	                    <posx>10</posx>
+	                    <posy>0</posy>
+	                    <width>350</width>
+	                    <height>40</height>
+	                    <font>font12_title</font>
+	                    <align>left</align>
+	                    <aligny>center</aligny>
+	                    <selectedcolor>selected</selectedcolor>
+	                    <info>ListItem.Label</info>
+	                </control>
+	            </focusedlayout>
+				<content>
+					<item id="1">
+						<description>Clear Setting</description>
+						<label>$LOCALIZE[31953]</label>
+						<onclick>Dialog.Close(2114)</onclick>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]Action)</onclick>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]Widget)</onclick>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)])</onclick>
+						<onclick>Skin.Reset(UsrSelectLabel)</onclick>
+					</item>
+					<item id="2">
+	                    <description>Weather</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[8]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Weather))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Weather)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[8])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>
+					<item id="3">
+	                    <description>Pictures</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[1]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Pictures))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Pictures)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[1])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>
+					<item id="4">
+	                    <description>Videos</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[3]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Videos,Root,return))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Videos)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[3])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>
+					<item id="5">
+	                    <description>Movies</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[342]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Videos,MovieTitles,return))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Movies)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[342])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>
+					<item id="6">
+	                    <description>TVShows</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[20343]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Videos,TVShowTitles,return))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,TVShows)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[20343])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>
+					<item id="7">
+	                    <description>Music</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[2]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Music))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Music)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[2])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>		
+					<item id="8">
+	                    <description>Programs</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[0]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(Programs,Addons,return))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Programs)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[0])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>	
+					<item id="9">
+	                    <description>Disc</description>
+						<label>$LOCALIZE[31954] - $LOCALIZE[341]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,XBMC.PlayDVD())</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,DiscMedia)</onclick>												
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[341])</onclick>	
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+	                </item>		
+					<item id="11">
+                        <description>Script</description>
+                        <label>$LOCALIZE[31955] - $LOCALIZE[24009]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetAddon(UsrSelectAddon,xbmc.python.script)</onclick>
+						<onclick>Skin.SetString(UsrSelectLabel,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>	
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,RunScript($INFO[Skin.String(UsrSelectAddon)]))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Script)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+                    </item>
+					<item id="12">
+                        <description>Add-Ons</description>
+                        <label>$LOCALIZE[31955] - $LOCALIZE[24000]</label>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.SetAddon(UsrSelectAddon,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(UsrSelectLabel,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>	
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,$VAR[UsrCustomAddonAction])</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,AddOn)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+					</item>
+					<item id="13">
+	                    <description>m3u Music Playlist</description>
+	                    <label>$LOCALIZE[31022] $LOCALIZE[559]</label>
+						<onclick>Skin.SetFile(UsrSelectAddon,.m3u,special://musicplaylists/)</onclick>
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[559])</onclick>	
+	                    <onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,PlayMedia(&quot;$INFO[Skin.String(UsrSelectAddon)]&quot;))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,m3uPlaylist)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]PlayList,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+                    </item>
+					<item id="14">
+                        <description>Playlist Video</description>
+                        <label>$LOCALIZE[31021] $LOCALIZE[559]</label>
+                        <onclick>Skin.SetFile(UsrSelectAddon,.xsp,special://videoplaylists/)</onclick>
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[559])</onclick>	
+                        <onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,ActivateWindow(VideoLibrary,$INFO[Skin.String(UsrSelectAddon)]))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,xspPlaylist)</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]PlayList,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick>Skin.SetString(UsrSelectLabel)</onclick>
+                    </item>
+					<item id="15">
+                        <description>Video Streaming File</description>
+                        <label>$LOCALIZE[31956]</label>
+                        <onclick>Skin.SetFile(UsrSelectAddon,.strm,/)</onclick> 
+						<onclick>Skin.SetString(UsrSelectLabel,$LOCALIZE[33002])</onclick>	
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Action,PlayMedia(&quot;$INFO[Skin.String(UsrSelectAddon)]&quot;))</onclick>
+						<onclick>Skin.SetString($INFO[Skin.String(UsrSelectBtn)]Widget,Stream)</onclick>
+						<onclick>Skin.Reset($INFO[Skin.String(UsrSelectBtn)]PlayList)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<onclick>Skin.Reset(UsrSelectBtn)</onclick>
+                        <onclick>Dialog.Close(2114)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(UsrSelectLabel))">Skin.SetString(UsrSelectLabel)</onclick>	
+                    </item>
+				</content>				
+			</control>
+		</control>
+	</controls>
+</window>

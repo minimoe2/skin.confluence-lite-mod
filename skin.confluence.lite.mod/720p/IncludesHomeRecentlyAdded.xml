@@ -10,8 +10,8 @@
 			<control type="group">
 				<posx>190</posx>
 				<posy>50</posy>
-				<visible>Library.HasContent(Movies)</visible>
-				<visible>Container(9000).Hasfocus(10) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
+				<visible>Library.HasContent(Movies) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Movies)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -242,8 +242,8 @@
 			<control type="group">
 				<posx>160</posx>
 				<posy>50</posy>
-				<visible>Library.HasContent(TVShows)</visible>
-				<visible>Container(9000).Hasfocus(11) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
+				<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,TVShows)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -504,8 +504,8 @@
 			<control type="group">
 				<posx>240</posx>
 				<posy>50</posy>
-				<visible>Library.HasContent(Music)</visible>
-				<visible>Container(9000).Hasfocus(3) + !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</visible>
+				<visible>Library.HasContent(Music) + !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Music)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="skin.confluence"
-  version="2.1.0"
-  name="Confluence"
-  provider-name="Jezz_X, Team XBMC">
+  id="skin.confluence.lite.mod"
+  version="1.0.0"
+  name="Confluence Lite Mod"
+  provider-name="Mudislander">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
   </requires>
@@ -15,19 +15,19 @@
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="bg">Облик Confluence от Jezz_X. (стандартния облик на XBMC)</summary>
-    <summary lang="ca">Aparença Confluence, per Jezz_X. (Aparença per defecte de l'XBMC)</summary>
-    <summary lang="en">Confluence skin by Jezz_X. (XBMC's default skin)</summary>
-    <summary lang="es">Confluence skin por Jezz_X. (skin por defecto)</summary>
-    <summary lang="fi">Confluence-ulkoasu Jezz_X:ltä. (XBMC:n oletus ulkoasu)</summary>
-    <summary lang="fr">Skin Confluence par Jezz_X. (skin par défaut)</summary>
-    <summary lang="hu">Confluence arculat. Készítő: Jezz_X</summary>
-    <summary lang="ko">Confluence 스킨 Jezz_X 만듬 (기본 스킨)</summary>
-    <summary lang="nl">Confluence skin door Jezz_X</summary>
-    <summary lang="pl">Confluence autorstwa Jezz_X</summary>
-    <summary lang="pt">Tema Confluence desenvolvido por Jezz_X. (Tema padrão do XBMC)</summary>
-    <summary lang="ro">Costum Confluence de Jezz_X. (costum implicit)</summary>
-    <summary lang="se">Confluence-skalet av Jezz_X. (XBMC standardskal)s</summary>
+    <summary lang="bg">Облик Confluence от Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="ca">Aparença Confluence, per Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="en">Confluence skin by Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="es">Confluence skin por Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="fi">Confluence-ulkoasu Jezz_X:ltä. (Modded by Mudislander)</summary>
+    <summary lang="fr">Skin Confluence par Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="hu">Confluence arculat. Készítő: Jezz_X  (Modded by Mudislander)</summary>
+    <summary lang="ko">Confluence 스킨 Jezz_X 만듬 (Modded by Mudislander)</summary>
+    <summary lang="nl">Confluence skin door Jezz_X  (Modded by Mudislander)</summary>
+    <summary lang="pl">Confluence autorstwa Jezz_X  (Modded by Mudislander)</summary>
+    <summary lang="pt">Tema Confluence desenvolvido por Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="ro">Costum Confluence de Jezz_X. (Modded by Mudislander)</summary>
+    <summary lang="se">Confluence-skalet av Jezz_X. (Modded by Mudislander)</summary>
     <summary lang="zh">Jezz_X开发的Confluence皮肤</summary>
     <description lang="bg">Confluence е стандартният облик на XBMC 9.11 и по-новите версии. Представлява смесица от концепциите на много от популярните облици. Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с XBMC.</description>
     <description lang="ca">Confluence és l'aparença per defecte de l'XBMC 9.11 i superior. És una combinació de conceptes de moltes aparences populars, i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per els nous usuaris d'XBMC.</description>

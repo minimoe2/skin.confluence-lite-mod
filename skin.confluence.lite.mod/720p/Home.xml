@@ -1,8 +1,6 @@
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
-	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
-	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -453,50 +451,50 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
 					<onright>9010</onright>
-					<visible>Container(9000).HasFocus(2)</visible>
-					<include>HomeSubMenuVideos</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,Videos)</visible>
+					<include>HomeSubMenuVideos</include> 
 				</control>
 				<control type="grouplist" id="9016">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9016</onleft>
 					<onright>9016</onright>
-					<visible>Container(9000).HasFocus(10)</visible>
-					<include>HomeSubMenuMovies</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,Movies)</visible>
+					<include>HomeSubMenuMovies</include> 
 				</control>
 				<control type="grouplist" id="9017">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
-					<visible>Container(9000).HasFocus(11)</visible>
-					<include>HomeSubMenuTVShows</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,TVShows)</visible>
+					<include>HomeSubMenuTVShows</include> 
 				</control>
 				<control type="grouplist" id="9011">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9011</onleft>
 					<onright>9011</onright>
-					<visible>Container(9000).HasFocus(3)</visible>
-					<include>HomeSubMenuMusic</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,Music)</visible>
+					<include>HomeSubMenuMusic</include> 
 				</control>
 				<control type="grouplist" id="9012">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
-					<visible>Container(9000).HasFocus(5)</visible>
-					<include>HomeSubMenuSystem</include> <!-- Buttons for the grouplist -->
+					<visible>Container(9000).HasFocus(12)</visible>
+					<include>HomeSubMenuSystem</include> 
 				</control>
 				<control type="grouplist" id="9013">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9013</onleft>
 					<onright>9013</onright>
-					<visible>Container(9000).HasFocus(6)</visible>
-					<include>HomeSubMenuPlayDisc</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,DiscMedia)</visible>
+					<include>HomeSubMenuPlayDisc</include> 
 				</control>
 				<control type="grouplist" id="9014">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9013</onleft>
 					<onright>9013</onright>
-					<visible>Container(9000).HasFocus(4)</visible>
-					<include>HomeSubMenuPictures</include> <!-- Buttons for the grouplist -->
+					<visible>StringCompare(Container(9000).ListItem.Label2,Pictures)</visible>
+					<include>HomeSubMenuPictures</include> 
 				</control>
 			</control>
 			<control type="image">
@@ -595,68 +593,112 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="7">
-						<label>8</label>
-						<onclick>ActivateWindow(Weather)</onclick>
+					<item id="1">
+						<description>Home Menu Item One</description>
+						<label>$INFO[Skin.String(HomeItemOneLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemOneAction)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
-					</item>
-					<item id="4">
-						<label>1</label>
-						<onclick>ActivateWindow(Pictures)</onclick>
-						<icon>special://skin/backgrounds/pictures.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+						<label2>$INFO[Skin.String(HomeItemOneWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemOneAction))</visible>
 					</item>
 					<item id="2">
-						<label>3</label>
-						<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-						<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+						<description>Home Menu Item Two</description>
+						<label>$INFO[Skin.String(HomeItemTwoLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemTwoAction)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-					</item>
-					<item id="10">
-						<label>20342</label>
-						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
-					</item>
-					<item id="11">
-						<label>20343</label>
-						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+						<label2>$INFO[Skin.String(HomeItemTwoWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemTwoAction))</visible>
 					</item>
 					<item id="3">
-						<label>2</label>
-						<onclick>ActivateWindow(Music)</onclick>
+						<description>Home Menu Item Three</description>
+						<label>$INFO[Skin.String(HomeItemThreeLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemThreeAction)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+						<label2>$INFO[Skin.String(HomeItemThreeWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemThreeAction))</visible>
 					</item>
-					<item id="1">
-						<label>0</label>
-						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+					<item id="4">
+						<description>Home Menu Item Four</description>
+						<label>$INFO[Skin.String(HomeItemFourLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemFourAction)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-					</item>
-					<item id="6">
-						<label>341</label>
-						<onclick>XBMC.PlayDVD()</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
-						<visible>System.HasMediaDVD</visible>
+						<label2>$INFO[Skin.String(HomeItemFourWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemFourAction))</visible>
 					</item>
 					<item id="5">
+						<description>Home Menu Item Five</description>
+						<label>$INFO[Skin.String(HomeItemFiveLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemFiveAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemFiveWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemFiveAction))</visible>
+					</item>
+					<item id="6">
+						<description>Home Menu Item Six</description>
+						<label>$INFO[Skin.String(HomeItemSixLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemSixAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemSixWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemSixAction))</visible>
+					</item>
+					<item id="7">
+						<description>Home Menu Item Seven</description>
+						<label>$INFO[Skin.String(HomeItemSevenLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemSevenAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemSevenWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemSevenAction))</visible>
+					</item>
+					<item id="8">
+						<description>Home Menu Item Eight</description>
+						<label>$INFO[Skin.String(HomeItemEightLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemEightAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemEightWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemEightAction))</visible>
+					</item>
+					<item id="9">
+						<description>Home Menu Item Nine</description>
+						<label>$INFO[Skin.String(HomeItemNineLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemNineAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemNineWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemNineAction))</visible>
+					</item>
+					<item id="10">
+						<description>Home Menu Item Ten</description>
+						<label>$INFO[Skin.String(HomeItemTenLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemTenAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemTenWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemTenAction))</visible>
+					</item>
+					<item id="11">
+						<description>Home Menu Item Eleven</description>
+						<label>$INFO[Skin.String(HomeItemElevenLabel)]</label>
+						<onclick>$INFO[Skin.String(HomeItemElevenAction)]</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<label2>$INFO[Skin.String(HomeItemElevenWidget)]</label2>
+						<visible>!IsEmpty(Skin.String(HomeItemElevenAction))</visible>
+					</item>
+					<item id="12">
+						<description>Home Menu Settings</description>
 						<label>13000</label>
 						<onclick>ActivateWindow(Settings)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
+						<label2>$LOCALIZE[5]</label2>
 					</item>
 				</content>
 			</control>
@@ -680,7 +722,7 @@
 			<ondown>20</ondown>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Videos) | StringCompare(Container(9000).ListItem.Label2,Movies) | StringCompare(Container(9000).ListItem.Label2,TVShows)</visible>	
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>9001</onup>
@@ -692,7 +734,7 @@
 			</control>
 			<control type="fixedlist" id="703">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(703).NumItems,2) | StringCompare(Container(703).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(3)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Music)</visible>
 				<onleft>703</onleft>
 				<onright>703</onright>
 				<onup>9001</onup>
@@ -704,7 +746,7 @@
 			</control>
 			<control type="fixedlist" id="704">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(704).NumItems,2) | StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(4)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Pictures)</visible>
 				<onleft>704</onleft>
 				<onright>704</onright>
 				<onup>9001</onup>
@@ -716,7 +758,7 @@
 			</control>
 			<control type="fixedlist" id="705">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(705).NumItems,2) | StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(1)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Label2,Programs)</visible>
 				<onleft>705</onleft>
 				<onright>705</onright>
 				<onup>9001</onup>

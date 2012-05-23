@@ -504,105 +504,152 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
-						<label>31108</label>
+						<label>$LOCALIZE[31950]</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="221">
-						<description>Hide Videos Button</description>
+					<control type="button" id="221">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 1</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemOneLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[3]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="222">
-						<description>Hide Movies Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemOne)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemOneLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="222">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 2</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemTwoLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[20342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>Library.HasContent(Movies)</enable>
-					</control>
-					<control type="radiobutton" id="223">
-						<description>Hide TV Shows Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemTwo)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemtwoLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="223">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 3</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemThreeLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>Library.HasContent(TVShows)</enable>
-					</control>
-					<control type="radiobutton" id="224">
-						<description>Hide Music Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemThree)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemThreeLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="224">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 4</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemFourLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="225">
-						<description>Hide Pictures Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemFour)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemFourLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="225">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 5</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemFiveLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="226">
-						<description>Hide Programs Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemFive)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemFiveLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="226">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 6</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemSixLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="228">
-						<description>Hide Weather Button</description>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemSix)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemSixLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="227">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>$LOCALIZE[31951] - 7</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemSevenLabel)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemSeven)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemSevenLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="228">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31951] - 8</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemEightLabel)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemEight)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemEightLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="229">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31951] - 9</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemNineLabel)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemNine)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemNineLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
+					<control type="button" id="230">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31951] - 10</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeItemTenLabel)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(UsrSelectBtn,HomeItemTen)</onclick>
+						<onclick>ActivateWindow(2114)</onclick>
+						<onclick>Skin.SetString(HomeItemTenLabel,$INFO[Skin.String(UsrSelectLabel)])</onclick>
+					</control>	
 				</control>
 				<control type="scrollbar" id="60">
 					<posx>1060</posx>
@@ -655,7 +702,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						</control>
-
 						<control type="label" id="456">
 							<width>750</width>
 							<height>45</height>
@@ -678,7 +724,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						</control>
-
 						<control type="label" id="410">
 							<width>750</width>
 							<height>45</height>
@@ -749,7 +794,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.video,xbmc.addon.executable)</onclick>
 						</control>
-
 						<control type="label" id="420">
 							<width>750</width>
 							<height>45</height>
@@ -820,7 +864,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeMusicButton5,xbmc.addon.audio,xbmc.addon.executable)</onclick>
 						</control>
-
 						<control type="label" id="430">
 							<width>750</width>
 							<height>45</height>
@@ -891,7 +934,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomePictureButton5,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
-
 						<control type="label" id="440">
 							<width>750</width>
 							<height>45</height>

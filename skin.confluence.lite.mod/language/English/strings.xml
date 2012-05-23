@@ -181,5 +181,16 @@
   <string id="31907">Video Forecast [COLOR=grey2](Fullscreen Playback)[/COLOR]</string>
   <string id="31908">Chance of Precipitation</string>
   <string id="31909">Fetching forecast info...</string>
-
+  
+  <!-- Confluence.lite.mod -->
+  
+  <string id="31950">Home Menu Items</string>
+  <string id="31951">Menu Item</string>
+  <string id="31952">Select Menu Option Type</string>
+  <string id="31953">Clear Menu Option</string>
+  <string id="31954">XBMC</string>
+  <string id="31955">Installed</string>
+  <string id="31956">Streaming Media</string>
+  
+  <!-- strings 31000 thru 31999 reserved for skins -->
   </strings>

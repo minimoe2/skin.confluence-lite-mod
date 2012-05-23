@@ -1097,6 +1097,13 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<variable name="UsrCustomAddonAction">
+		<value condition="substring(Skin.String(UsrSelectAddon),plugin.video,Left)">ActivateWindow(10024,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
+		<value condition="substring(Skin.String(UsrSelectAddon),plugin.audio,Left)">ActivateWindow(10501,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
+		<value condition="substring(Skin.String(UsrSelectAddon),plugin.program,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
+		<value condition="substring(Skin.String(UsrSelectAddon),plugin.games,Left)">ActivateWindow(10001,plugin://$INFO[Skin.String(UsrSelectAddon)]/)</value>
+		<value condition="substring(Skin.String(UsrSelectAddon),script,Left)">runscript($INFO[Skin.String(UsrSelectAddon)])</value>
+	</variable>
 	<include name="backgroundfade">
 		 <animation effect="fade" time="600">Visible</animation>
 		 <animation effect="fade" time="600">Hidden</animation>
