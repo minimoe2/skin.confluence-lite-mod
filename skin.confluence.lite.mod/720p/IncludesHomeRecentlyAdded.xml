@@ -741,7 +741,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.1.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.1.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.1.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.1.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.1.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.1.Label))</visible>
@@ -759,7 +759,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.2.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.2.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.2.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.2.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.2.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.2.Label))</visible>
@@ -777,7 +777,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.3.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.3.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.3.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.3.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.3.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.3.Label))</visible>
@@ -795,7 +795,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.4.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.4.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.4.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.4.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.4.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.4.Label))</visible>
@@ -813,7 +813,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.5.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.5.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.5.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.5.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.5.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.5.Label))</visible>
@@ -831,7 +831,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.6.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.6.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.6.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.6.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.6.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.6.Label))</visible>
@@ -849,7 +849,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.7.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.7.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.7.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.7.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.7.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.7.Label))</visible>
@@ -867,7 +867,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.8.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.8.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.8.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.8.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.8.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.8.Label))</visible>
@@ -885,7 +885,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.9.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.9.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.9.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.9.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.9.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.9.Label))</visible>
@@ -903,7 +903,7 @@
 							<label>$INFO[Window.Property(WatchList_Album.10.Label)]</label>
 							<label2>$INFO[Window.Property(WatchList_Album.10.Artist)]</label2>
 							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia(&quot;$INFO[Window.Property(WatchList_Album.10.Path)]&quot;)</onclick>
+							<onclick>$INFO[Window(Home).Property(WatchList_Album.10.Path)]</onclick>	
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(WatchList_Album.10.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(WatchList_Album.10.Label))</visible>

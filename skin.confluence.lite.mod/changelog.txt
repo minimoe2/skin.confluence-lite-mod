@@ -1,4 +1,8 @@
-[B]1.0.2[/B] [I]Apr 2012[/I]
+[[B]1.0.3[/B] [I]Apr 2012[/I]
+- Bugfix Suggested Albums not playing
+- Enabled code Jezz had hidden for weather icon on home screen
+
+B]1.0.2[/B] [I]Apr 2012[/I]
 - Added Recently Added Music Videos
 - Added support for script.randomandlastitems if installed
 - Added support for script.watchlist if installed

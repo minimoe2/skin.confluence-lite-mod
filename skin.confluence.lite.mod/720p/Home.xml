@@ -2,9 +2,6 @@
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
 	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(Watchlist_Control))">SetProperty(Watchlist_Control,True)</onload>  
-		
-	
-	
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemOnePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemOnePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListOne)</onload>
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTwoPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTwoPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTwo)</onload>
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemThreePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemThreePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListThree)</onload>
@@ -15,9 +12,6 @@
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemEightPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemEightPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListEight)</onload>
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemNinePlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemNinePlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListNine)</onload>
 	<onload condition="System.HasAddon(script.randomandlastitems) + !IsEmpty(Skin.String(HomeItemTenPlaylist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItemTenPlaylist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,propertie=HomePlayListTen)</onload>
-	
-	
-	
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
@@ -41,6 +35,7 @@
 			<texture>xbmc-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<visible>IsEmpty(Weather.Conditions) | !Weather.IsFetched</visible>
 		</control>
 		<!-- Music Info -->
 		<control type="group">
@@ -871,10 +866,14 @@
 				<texture>icon_favourites.png</texture>
 			</control>
 		</control>
+		
+		
+		
+		
 		<control type="group">
 			<posx>20</posx>
 			<posy>0</posy>
-			<visible>false</visible>
+			<visible>!IsEmpty(Weather.Conditions) + Weather.IsFetched</visible>
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<description>Weather image</description>
@@ -939,6 +938,12 @@
 				</control>
 			</control>
 		</control>
+		
+		
+		
+		
+		
+		
 		<include>Clock</include>
 		<control type="label">
 			<description>Date label</description>
