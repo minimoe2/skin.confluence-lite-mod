@@ -9,13 +9,13 @@
 			<include>ButtonHomeSubCommonValues</include>
 			<label>342</label>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+			<visible>Library.HasContent(Movies)</visible>
 		</control>
 		<control type="button" id="90103">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>20343</label>
 			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
-			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+			<visible>Library.HasContent(TVShows)</visible>
 		</control>
 		<control type="button" id="90104">
 			<include>ButtonHomeSubCommonValues</include>
@@ -28,12 +28,12 @@
 			<label>744</label>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
 		</control>
-		<control type="button" id="90106">
+		<!--control type="button" id="90106">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>14022</label>
 			<onclick>ActivateWindow(Videos,Root)</onclick>
 			<visible>Library.HasContent(Video)</visible>
-		</control>
+		</control-->
 		<control type="button" id="90107">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>24001</label>
@@ -76,11 +76,11 @@
 			<label>652</label>
 			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
 		</control>
-		<control type="button" id="90167">
+		<!--control type="button" id="90167">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>344</label>
 			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
-		</control>
+		</control-->
 		<control type="image" id="90168">
 			<width>35</width>
 			<height>35</height>
@@ -142,12 +142,12 @@
 			<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
 			<visible>Library.HasContent(Music)</visible>
 		</control>
-		<control type="button" id="90114">
+		<!--control type="button" id="90114">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>134</label>
 			<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
 			<visible>Library.HasContent(Music)</visible>
-		</control>
+		</control-->
 		<control type="button" id="90115">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>744</label>
@@ -280,12 +280,12 @@
 			<label>13200</label>
 			<onclick>ActivateWindow(Profiles)</onclick>
 		</control>
-		<control type="button" id="90187">
+		<!--control type="button" id="90187">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>5</label>
 			<onclick>SetProperty(MenuItemActive,Settings,Home)</onclick>
 			<onclick>ActivateWindow(Settings)</onclick>
-		</control>
+		</control-->
 		<control type="image" id="90188">
 			<width>35</width>
 			<height>35</height>
