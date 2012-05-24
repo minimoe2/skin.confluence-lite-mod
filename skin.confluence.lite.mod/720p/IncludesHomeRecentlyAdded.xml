@@ -19,7 +19,11 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>850</width>
-					<height>470</height>
+					<!--height>470</height-->
+					
+<height>455</height>
+					
+					
 					<texture border="20">ContentPanel.png</texture>
 					<colordiffuse>6FFFFFFF</colordiffuse>
 				</control>
@@ -323,7 +327,7 @@
 					<posy>18</posy>
 					<height>20</height>
 					<width>830</width>
-					<label>$LOCALIZE[31332]</label>
+					<label>$LOCALIZE[31989]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13_title</font>
