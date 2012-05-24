@@ -28,7 +28,7 @@
 		<!-- Music Info -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>230</posy>
+			<posy>250</posy>
 			<visible>Player.HasAudio</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -73,7 +73,7 @@
 			</control>
 			<control type="label">
 				<description>Album Label</description>
-				<posx>215</posx>
+				<posx>220</posx>
 				<posy>250</posy>
 				<height>25</height>
 				<width>1000</width>
@@ -86,10 +86,10 @@
 			</control>
 			<control type="label">
 				<description>Title label</description>
-				<posx>215</posx>
-				<posy>270</posy>
+				<posx>220</posx>
+				<posy>275</posy>				
 				<height>30</height>
-				<width>1000</width>
+				<width>540</width>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -99,8 +99,8 @@
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<posx>215</posx>
-				<posy>295</posy>
+				<posx>220</posx>
+				<posy>305</posy>				
 				<height>30</height>
 				<width>300</width>
 				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -123,7 +123,7 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>20</posx>
-					<posy>215</posy>
+					<posy>235</posy>				
 					<width>120</width>
 					<height>300</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
@@ -134,9 +134,9 @@
 				<control type="label">
 					<description>Title label</description>
 					<posx>160</posx>
-					<posy>450</posy>
+					<posy>480</posy>
 					<height>30</height>
-					<width>1000</width>
+					<width>580</width>					
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -147,7 +147,7 @@
 				<control type="label">
 					<description>Time Label</description>
 					<posx>160</posx>
-					<posy>475</posy>
+					<posy>505</posy>					
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -163,7 +163,7 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>30</posx>
-					<posy>285</posy>
+					<posy>305</posy>
 					<width>160</width>
 					<height>225</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -171,7 +171,7 @@
 				</control>
 				<control type="image">
 					<posx>5</posx>
-					<posy>275</posy>
+					<posy>295</posy>
 					<width>194</width>
 					<height>245</height>
 					<aspectratio>stretch</aspectratio>
@@ -180,7 +180,7 @@
 				<control type="label">
 					<description>Studio label</description>
 					<posx>205</posx>
-					<posy>430</posy>
+					<posy>450</posy>
 					<height>25</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.Studio]</label>
@@ -193,9 +193,9 @@
 				<control type="label">
 					<description>Title label</description>
 					<posx>205</posx>
-					<posy>450</posy>
+					<posy>475</posy>
 					<height>30</height>
-					<width>1000</width>
+					<width>550</width>					
 					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -206,7 +206,7 @@
 				<control type="label">
 					<description>Time Label</description>
 					<posx>205</posx>
-					<posy>475</posy>
+					<posy>505</posy>
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -222,18 +222,18 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>20</posx>
-					<posy>395</posy>
+					<posy>415</posy>
 					<width>180</width>
 					<height>120</height>
-					<aspectratio>scale</aspectratio>
+					<aspectratio aligny="bottom">scale</aspectratio>
 					<texture>$INFO[VideoPlayer.Cover]</texture>
 					<bordertexture border="8">ThumbBorder.png</bordertexture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="label">
 					<description>TV Show Season Ep Label</description>
-					<posx>210</posx>
-					<posy>430</posy>
+					<posx>220</posx>
+					<posy>450</posy>
 					<height>25</height>
 					<width>1000</width>
 					<label>$INFO[VideoPlayer.TVShowTitle] ($LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode])</label>
@@ -245,10 +245,10 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>210</posx>
-					<posy>450</posy>
+					<posx>220</posx>
+					<posy>475</posy>					
 					<height>30</height>
-					<width>1000</width>
+					<width>540</width>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -258,8 +258,8 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<posx>210</posx>
-					<posy>475</posy>
+					<posx>220</posx>
+					<posy>505</posy>					
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -291,7 +291,7 @@
 		<control type="group">
 			<description>Controls for currently playing media</description>
 			<posx>545r</posx>
-			<posy>530</posy>
+			<posy>550</posy>
 			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia">conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -469,7 +469,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posy>560</posy>
+			<posy>580</posy>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
