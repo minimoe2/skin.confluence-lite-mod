@@ -13,6 +13,7 @@
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeMenuItems.xml" />
+	<include file="IncludesHomeWeatherForecast.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesCDWall.xml" />
 	<include file="IncludesGenreFlagging.xml" />
