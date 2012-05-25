@@ -273,6 +273,7 @@
 			</control>
 		</control>
 		<include condition="!Skin.HasSetting(HideHomeMediaPanel)">HomeContentPanelInfo</include>
+		<include condition="!Skin.HasSetting(HideHomeWeatherPanel)">HomeWeatherForecast</include>
 		<control type="button" id="9003">
 			<description>Hidden Button to pass through navigation when recently added is disabled</description>
 			<posx>-20</posx>
