@@ -71,7 +71,7 @@
 					<label>$INFO[VideoPlayer.Plot]</label>
 					<autoscroll time="4000" delay="3000" repeat="5000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
 				</control>
-			</control>	
+			</control>
 			<control type="image" id="1">
 				<description>clearart image</description>
 				<posx>20</posx>
@@ -91,6 +91,18 @@
 				<texture>$INFO[Player.FolderPath]../logo.png</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>!VideoPlayer.Content(Movies) + Skin.HasSetting(TVShowUsesLogo) + !Window.IsActive(script.pseudotv.TVOverlay.xml)</visible>
+			</control>
+			<control type="image" id="1">
+				<description>not movie image</description>
+				<posx>20</posx>
+				<posy>337r</posy>
+				<width>300</width>
+				<height>330</height>
+				<info>VideoPlayer.Cover</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="8">ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>52</posx>
