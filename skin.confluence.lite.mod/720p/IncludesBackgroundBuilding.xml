@@ -92,6 +92,7 @@
 			<texture>floor.png</texture>
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideSkinFloor)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -279,7 +280,7 @@
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				<visible>Control.IsVisible(723)</visible>
+				<visible>Control.IsVisible(722) | Control.IsVisible(723)</visible>
 				<control type="image">
 					<posx>35</posx>
 					<posy>40</posy>

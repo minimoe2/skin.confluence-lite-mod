@@ -12,6 +12,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideSkinFloor)</visible>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
