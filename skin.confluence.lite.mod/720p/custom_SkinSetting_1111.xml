@@ -1728,7 +1728,19 @@
 						<onclick>Skin.ToggleSetting(ShowArtistSlideShow)</onclick>
 						<selected>Skin.HasSetting(ShowArtistSlideShow)</selected>
 					</control>
-					<control type="label" id="422">
+					<control type="radiobutton" id="422">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31991]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(NoAnimateFanArt)</onclick>
+						<selected>Skin.HasSetting(NoAnimateFanArt)</selected>
+					</control>
+					<control type="label" id="423">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -1738,7 +1750,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="423">
+					<control type="radiobutton" id="424">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1750,7 +1762,7 @@
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="424">
+					<control type="button" id="425">
 						<description>Startup Playlist Path</description>
 						<width>750</width>
 						<height>40</height>
