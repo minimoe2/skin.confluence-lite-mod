@@ -189,4 +189,85 @@
   
   <!-- strings 31000 thru 31999 reserved for skins -->
 
+    <!-- Confluence.lite.mod -->
+  
+   <!-- Genre Catagories -->	
+	<string name="31600">Action</string>
+	<string name="31601">Adventure</string>
+	<string name="31602">Animation</string>
+	<string name="31603">Biography</string>
+	<string name="31604">Children</string>
+	<string name="31605">Comedy</string>	
+	<string name="31606">Crime</string>
+	<string name="31607">Disaster</string>
+	<string name="31608">Documentary</string>
+	<string name="31609">Drama</string>
+	<string name="31610">Family</string>
+	<string name="31611">Fantasy</string>
+	<string name="31612">History</string>	
+	<string name="31613">Holiday</string>
+	<string name="31614">Horror</string>
+	<string name="31615">Indie</string>
+	<string name="31616">Musical</string>
+	<string name="31617">Mystery</string>
+	<string name="31618">Romance</string>
+	<string name="31619">Sci-Fi</string>	
+	<string name="31620">Short</string>
+	<string name="31621">Sport</string>
+	<string name="31622">Suspense</string>
+	<string name="31623">Thriller</string>
+	<string name="31624">War</string>	
+	<string name="31625">Western</string>
+
+  
+	<string name="31950">Home Menu Items</string>
+	<string name="31951">Menu Item</string>
+	<string name="31952">Select Menu Option Type</string>
+	<string name="31953">Clear Menu Option</string>
+	<string name="31954">XBMC</string>
+	<string name="31955">Installed</string>
+	<string name="31956">Streaming Media</string>
+	<string name="31957">NB! No Favourites Found</string>
+	<string name="31958">User</string>
+	<string name="31959">Suggested</string>
+	<string name="31960">Random</string>
+	<string name="31961">Cinema</string>
+	<string name="31962">DB Edit</string>
+	<string name="31963">Enable Album Art Background Wall</string>
+	<string name="31964">Next Tracks</string>
+	<string name="31965">Home Media Panel</string>
+	<string name="31966">Allow Watchlist Script Suggestions</string>
+	<string name="31967">Allow Playlist Script Suggestions</string>
+	<string name="31968">Playlist Script Shows Recent not Random Items</string>
+	<string name="31969">Playlist Script Only Shows UnWatched Items</string>
+	<string name="31970">Show Story Plot on Pause</string>
+	<string name="31971">TVshows use Logos not ClearArt</string>
+	<string name="31972">Hide Media Cases</string>
+	<string name="31973">Low List</string>
+	<string name="31974">Show Logos</string>
+	<string name="31975">Show ClearArt</string>
+	<string name="31976">Hide Genre Icons</string>
+	<string name="31977">Show ExtraFanArt</string>
+	<string name="31978">Play</string>
+	<string name="31979">Browse not Play - Favourite Playlist Added to Main Menu</string>
+	<string name="31980">Recently Added Items</string>
+	<string name="31981">Random Items</string>
+	<string name="31982">AddOns</string>
+	<string name="31983">Show SubTitle Country Flag</string>
+	<string name="31984">Media Views - Global</string>
+	<string name="31985">Use External Watch Status Icons [COLOR=grey3](Media Thumbnails Only)[/COLOR]</string>
+	<string name="31986">Allow External "UnWatched" Icon</string>
+	<string name="31987">Wallstream</string>
+	<string name="31988">Darken Watched</string>
+	<string name="31989">Latest Albums</string>
+	<string name="31990">Hide Skin Floor</string>
+	<string name="31991">Stop Background Fanart Animation</string>
+	<string name="31992">Allow Weather Forecast Panel</string>
+	<string name="31993">Enable Permanent Weather Panel</string>
+  
+ 
+  <!-- strings 31000 thru 31999 reserved for skins -->
+  
+
+  
 </resources>
