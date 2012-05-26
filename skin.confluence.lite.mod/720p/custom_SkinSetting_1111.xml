@@ -1416,7 +1416,21 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>System.HasAddon(script.randomandlastitems) + !Skin.HasSetting(HideHomeMediaPanel) + !Skin.HasSetting(HideWatchPlaylist)</enable>
 					</control>
-					<control type="radiobutton" id="306">
+							<control type="radiobutton" id="306">
+						<description>Hide Home Panel Fanart</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31994]</label>
+						<onclick>Skin.ToggleSetting(HideHomePanelFanArt)</onclick>
+						<selected>Skin.HasSetting(HideHomePanelFanArt)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<enable>!Skin.HasSetting(HideHomeMediaPanel)</enable>
+					</control>
+					<control type="radiobutton" id="307">
 						<description>Show weather panel</description>
 						<width>750</width>
 						<height>40</height>
@@ -1429,7 +1443,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="307">
+					<control type="radiobutton" id="308">
 						<description>Permanent weather panel</description>
 						<width>750</width>
 						<height>40</height>
@@ -1443,7 +1457,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>!Skin.HasSetting(HideHomeWeatherPanel)</enable>
 					</control>
-					<control type="label" id="308">
+					<control type="label" id="309">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -1453,7 +1467,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="309">
+					<control type="radiobutton" id="310">
 						<description>enable weather info</description>
 						<width>750</width>
 						<height>40</height>
