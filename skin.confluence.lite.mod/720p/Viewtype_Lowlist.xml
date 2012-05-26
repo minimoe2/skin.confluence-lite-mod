@@ -145,7 +145,7 @@
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>724</onleft>
-				<onright>2</onright>
+				<onright>8998</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(724)</visible>
@@ -720,7 +720,7 @@
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>733</onleft>
-				<onright>2</onright>
+				<onright>8998</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(733)</visible>

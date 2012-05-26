@@ -158,8 +158,8 @@
 			<posy>55r</posy>
 			<animation effect="fade" time="250" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(home)">WindowClose</animation>
-			<visible>system.getbool(input.enablemouse)</visible>
-			<control type="button">
+			<visible>system.getbool(input.enablemouse) | !Skin.HasSetting(HideMediaHomeButton)</visible>
+			<control type="button" id="8997">
 				<description>Back push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -172,7 +172,7 @@
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
-				<onright>50</onright>
+				<onright>8998</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
 			</control>
@@ -185,7 +185,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_back.png</texture>
 			</control>
-			<control type="button">
+			<control type="button" id="8998">
 				<description>Home push button</description>
 				<posx>55</posx>
 				<posy>0</posy>
@@ -197,7 +197,7 @@
 				<onclick>ActivateWindow(home)</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
+				<onleft>8997</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
@@ -312,7 +312,7 @@
 	</include>
 	<include name="CommonPageCount">
 		<control type="group">
-			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)  | !Skin.HasSetting(HideMediaHomeButton)">Conditional</animation>
 			<control type="label">
 				<description>Page Count Label</description>
 				<posx>40r</posx>
