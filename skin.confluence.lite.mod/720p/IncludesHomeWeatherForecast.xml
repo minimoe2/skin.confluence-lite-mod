@@ -8,7 +8,7 @@
 				[!Skin.HasSetting(HideHomeMediaPanel) + !StringCompare(Container(9000).ListItem.Label2,Movies) +
 				!StringCompare(Container(9000).ListItem.Label2,TVShows) + !StringCompare(Container(9000).ListItem.Label2,Music) +
 				!StringCompare(Container(9000).ListItem.Label2,Concerts) + !StringCompare(Container(9000).ListItem.Label2,Playlist)] |
-				[StringCompare(Container(9000).ListItem.Label2,Playlist) + Skin.HasSetting(HideWatchPlaylist) | !System.HasAddon(script.randomandlastitems)]
+				[StringCompare(Container(9000).ListItem.Label2,Playlist) + Skin.HasSetting(HideWatchPlaylist)]
 			</visible>	
 			<include>VisibleFadeEffect</include>
 			<posx>215</posx>
