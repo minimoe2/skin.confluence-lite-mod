@@ -3,7 +3,7 @@
   id="skin.confluence.lite.mod"
   version="1.0.9"
   name="Confluence Lite Mod"
-  provider-name="Mudislander">
+  provider-name="C-Team">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
 	<import addon="script.artistslideshow" version="1.1.5"/>
