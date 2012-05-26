@@ -742,7 +742,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>850</width>
-						<height>470</height>
+						<height>455</height>
 						<texture border="20">ContentPanel.png</texture>
 						<colordiffuse>6FFFFFFF</colordiffuse>
 					</control>

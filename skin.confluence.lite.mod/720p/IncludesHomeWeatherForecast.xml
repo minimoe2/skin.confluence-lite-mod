@@ -70,7 +70,7 @@
 					<label>$INFO[Window(weather).Property(Day0.Title)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
+					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -129,7 +129,7 @@
 					<label>$INFO[Window(weather).Property(Day1.Title)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
+					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -188,7 +188,7 @@
 					<label>$INFO[Window(weather).Property(Day2.Title)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
+					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -247,7 +247,7 @@
 					<label>$INFO[Window(weather).Property(Day3.Title)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
+					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
