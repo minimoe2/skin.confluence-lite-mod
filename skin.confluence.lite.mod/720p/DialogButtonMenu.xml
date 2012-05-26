@@ -264,7 +264,7 @@
 				<label>$LOCALIZE[13000] $LOCALIZE[5]</label>
 				<visible>Skin.HasSetting(HideHomeMenuSystem)</visible>
 			</control>
-			<control type="button" id="12">
+			<control type="button" id="13">
 				<description>Skin Settings button</description>
 				<width>340</width>
 				<height>40</height>
