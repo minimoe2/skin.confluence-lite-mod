@@ -1,0 +1,283 @@
+<includes>
+	<include name="MultiGenreFlag">
+		<width>120</width>
+		<height>110</height>
+		<aspectratio aligny="bottom">keep</aspectratio>
+		<fadetime>IconCrossfadeTime</fadetime>
+	</include>
+	<include name="GenreTextPlace">
+		<width>120</width>
+		<height>30</height>
+		<font>font10_title</font>
+		<textcolor>grey2</textcolor>
+	</include>
+	<include name="MultiVideoGenreFlagging">
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Action.png">$VAR[GenreFlagPath]$LOCALIZE[31600].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31600]) | substring(ListItem.Genre,Action) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31600]) | substring(Container(7000).ListItem.Genre,Action)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Adventure.png">$VAR[GenreFlagPath]$LOCALIZE[31601].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31601]) | substring(ListItem.Genre,Adventure) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31601]) | substring(Container(7000).ListItem.Genre,Adventure)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Animation.png">$VAR[GenreFlagPath]$LOCALIZE[31602].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31602]) | substring(ListItem.Genre,Animation) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31602]) | substring(Container(7000).ListItem.Genre,Animation)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Biography.png">$VAR[GenreFlagPath]$LOCALIZE[31603].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31603]) | substring(ListItem.Genre,Biography) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31603]) | substring(Container(7000).ListItem.Genre,Biography)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Children.png">$VAR[GenreFlagPath]$LOCALIZE[31604].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31604]) | substring(ListItem.Genre,Children) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31604]) | substring(Container(7000).ListItem.Genre,Children)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Comedy.png">$VAR[GenreFlagPath]$LOCALIZE[31605].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31605]) | substring(ListItem.Genre,Comedy) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31605]) | substring(Container(7000).ListItem.Genre,Comedy)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Crime.png">$VAR[GenreFlagPath]$LOCALIZE[31606].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31606]) | substring(ListItem.Genre,Crime) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31606]) | substring(Container(7000).ListItem.Genre,Crime)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Disaster.png">$VAR[GenreFlagPath]$LOCALIZE[31607].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31607]) | substring(ListItem.Genre,Disaster) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31607]) | substring(Container(7000).ListItem.Genre,Disaster)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Documentary.png">$VAR[GenreFlagPath]$LOCALIZE[31608].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31608]) | substring(ListItem.Genre,Document) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31608]) | substring(Container(7000).ListItem.Genre,Document)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Drama.png">$VAR[GenreFlagPath]$LOCALIZE[31609].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31609]) | substring(ListItem.Genre,Drama) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31609]) | substring(Container(7000).ListItem.Genre,Drama)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Family.png">$VAR[GenreFlagPath]$LOCALIZE[31610].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31610]) | substring(ListItem.Genre,Family) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31610]) | substring(Container(7000).ListItem.Genre,Family)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Fantasy.png">$VAR[GenreFlagPath]$LOCALIZE[31611].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31611]) | substring(ListItem.Genre,Fantasy) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31611]) | substring(Container(7000).ListItem.Genre,Fantasy)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/History.png">$VAR[GenreFlagPath]$LOCALIZE[31612].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31612]) | substring(ListItem.Genre,History) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31612]) | substring(Container(7000).ListItem.Genre,History)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Holiday.png">$VAR[GenreFlagPath]$LOCALIZE[31613].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31613]) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31613]) |
+			substring(ListItem.Genre,Holiday) | substring(Container(7000).ListItem.Genre,Holiday) |
+			substring(ListItem.Genre,Christmas) | substring(Container(7000).ListItem.Genre,Christmas)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Horror.png">$VAR[GenreFlagPath]$LOCALIZE[31614].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31614]) | substring(ListItem.Genre,Horror) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31614]) | substring(Container(7000).ListItem.Genre,Horror)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Indie.png">$VAR[GenreFlagPath]$LOCALIZE[31615].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31615]) | substring(ListItem.Genre,Indie) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31615]) | substring(Container(7000).ListItem.Genre,Indie)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<texture background="true" fallback="DefaultGenre/Musical.png">$VAR[GenreFlagPath]$LOCALIZE[31616].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31616]) | substring(ListItem.Genre,Music) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31616]) | substring(Container(7000).ListItem.Genre,Music)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Mystery.png">$VAR[GenreFlagPath]$LOCALIZE[31617].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31617]) | substring(ListItem.Genre,Mystery) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31617]) | substring(Container(7000).ListItem.Genre,Mystery)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Romance.png">$VAR[GenreFlagPath]$LOCALIZE[31618].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31618]) | substring(ListItem.Genre,Romance) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31618]) | substring(Container(7000).ListItem.Genre,Romance)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Sci-Fi.png">$VAR[GenreFlagPath]$LOCALIZE[31619].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31619]) | substring(ListItem.Genre,Sci) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31619]) | substring(Container(7000).ListItem.Genre,Sci)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Short.png">$VAR[GenreFlagPath]$LOCALIZE[31620].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31620]) | substring(ListItem.Genre,Short) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31620]) | substring(Container(7000).ListItem.Genre,Short)</visible>
+		</control>	
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Sport.png">$VAR[GenreFlagPath]$LOCALIZE[31621].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31621]) | substring(ListItem.Genre,Sport) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31621]) | substring(Container(7000).ListItem.Genre,Sport)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Suspense.png">$VAR[GenreFlagPath]$LOCALIZE[31622].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31622]) | substring(ListItem.Genre,Suspense) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31622]) | substring(Container(7000).ListItem.Genre,Suspense)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Thriller.png">$VAR[GenreFlagPath]$LOCALIZE[31623].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31623]) | substring(ListItem.Genre,Thriller) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31623]) | substring(Container(7000).ListItem.Genre,Thriller)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/War.png">$VAR[GenreFlagPath]$LOCALIZE[31624].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31624]) | substring(ListItem.Genre,War) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31624]) | substring(Container(7000).ListItem.Genre,War)</visible>
+		</control>
+		<control type="image">
+			<include>MultiGenreFlag</include>
+			<texture background="true" fallback="DefaultGenre/Western.png">$VAR[GenreFlagPath]$LOCALIZE[31625].png</texture>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31625]) | substring(ListItem.Genre,Western) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31625]) | substring(Container(7000).ListItem.Genre,Western)</visible>
+		</control>
+	</include>
+	<include name="GenreText">
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31600]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31600]) | substring(ListItem.Genre,Action) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31600]) | substring(Container(7000).ListItem.Genre,Action)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31601]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31601]) | substring(ListItem.Genre,Adventure) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31601]) | substring(Container(7000).ListItem.Genre,Adventure)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>$LOCALIZE[31602]</label>			
+			<visible>substring(ListItem.Genre,$LOCALIZE[31602]) | substring(ListItem.Genre,Animation) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31602]) | substring(Container(7000).ListItem.Genre,Animation)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>$LOCALIZE[31603]</label>			
+			<visible>substring(ListItem.Genre,$LOCALIZE[31603]) | substring(ListItem.Genre,Biography) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31603]) | substring(Container(7000).ListItem.Genre,Biography)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31604]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31604]) | substring(ListItem.Genre,Children) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31604]) | substring(Container(7000).ListItem.Genre,Children)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31605]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31605]) | substring(ListItem.Genre,Comedy) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31605]) | substring(Container(7000).ListItem.Genre,Comedy)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31606]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31606]) | substring(ListItem.Genre,Crime) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31606]) | substring(Container(7000).ListItem.Genre,Crime)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31607]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31607]) | substring(ListItem.Genre,Disaster) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31607]) | substring(Container(7000).ListItem.Genre,Disaster)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31608]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31608]) | substring(ListItem.Genre,Document) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31608]) | substring(Container(7000).ListItem.Genre,Document)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31609]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31609]) | substring(ListItem.Genre,Drama) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31609]) | substring(Container(7000).ListItem.Genre,Drama)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31610]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31610]) | substring(ListItem.Genre,Family) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31610]) | substring(Container(7000).ListItem.Genre,Family)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31611]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31611]) | substring(ListItem.Genre,Fantasy) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31611]) | substring(Container(7000).ListItem.Genre,Fantasy)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31612]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31612]) | substring(ListItem.Genre,History) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31612]) | substring(Container(7000).ListItem.Genre,History)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31614]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31613]) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31613]) |
+				substring(ListItem.Genre,Holiday) | substring(Container(7000).ListItem.Genre,Holiday) |
+				substring(ListItem.Genre,Christmas) | substring(Container(7000).ListItem.Genre,Christmas)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31614]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31614]) | substring(ListItem.Genre,Horror) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31614]) | substring(Container(7000).ListItem.Genre,Horror)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31615]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31615]) | substring(ListItem.Genre,Indie) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31615]) | substring(Container(7000).ListItem.Genre,Indie)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31616]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31616]) | substring(ListItem.Genre,Music) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31616]) | substring(Container(7000).ListItem.Genre,Music)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31617]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31617]) | substring(ListItem.Genre,Mystery) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31617]) | substring(Container(7000).ListItem.Genre,Mystery)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31618]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31618]) | substring(ListItem.Genre,Romance) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31618]) | substring(Container(7000).ListItem.Genre,Romance)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31619]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31619]) | substring(ListItem.Genre,Sci) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31619]) | substring(Container(7000).ListItem.Genre,Sci)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31620]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31620]) | substring(ListItem.Genre,Short) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31620]) | substring(Container(7000).ListItem.Genre,Short)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31621]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31621]) | substring(ListItem.Genre,Sport) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31621]) | substring(Container(7000).ListItem.Genre,Sport)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31622]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31622]) | substring(ListItem.Genre,Suspense) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31622]) | substring(Container(7000).ListItem.Genre,Suspense)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31623]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31623]) | substring(ListItem.Genre,Thriller) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31623]) | substring(Container(7000).ListItem.Genre,Thriller)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31624]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31624]) | substring(ListItem.Genre,War) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31624]) | substring(Container(7000).ListItem.Genre,War)</visible>
+		</control>
+		<control type="label">
+			<include>GenreTextPlace</include>
+			<label>&#160;&#160;$LOCALIZE[31625]</label>
+			<visible>substring(ListItem.Genre,$LOCALIZE[31625]) | substring(ListItem.Genre,Western) | substring(Container(7000).ListItem.Genre,$LOCALIZE[31625]) | substring(Container(7000).ListItem.Genre,Western)</visible>
+		</control>
+	</include>
+</includes>

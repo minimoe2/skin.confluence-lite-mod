@@ -1,0 +1,11 @@
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="grey">FFebebeb</color>
+	<color name="grey2">ffcacaca</color>
+	<color name="grey3">FF696a6c</color>
+	<color name="grey4">FFebebeb</color>
+	<color name="black">FF111111</color>
+	<color name="blue">ff83622d</color>
+	<color name="selected">dd81591e</color>
+	<color name="dialogheader">ee83622d</color>
+</colors>

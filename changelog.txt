@@ -1,0 +1,66 @@
+[B]1.0.9[/B] [I]May 2012[/I]
+- Bugfix Music Addons not behaving
+- Added Music Albums and Artists option to Main Menu Options
+- Added Full Wall Views
+- Introduced Subtitle flags
+- Bugfix Home Panel Music upkey did not return user to bottom menu
+- Bugfix LowList MenuItem Label widths
+- Added WallStream View - + option for darkened watched item
+- Added option for External Watched Icons
+
+[B]1.0.8[/B] [I]May 2012[/I]
+- ReIntroduced clock to Video OSD
+- Added Options for Favourites and Addons Windows to Main Menu + Shutdown
+- Added Submenu for Favourites and Shutdown
+- Made Homescreen Media Panel slightly darker
+- Bugfix Home Media Panel Hidden Setting
+- Bugfix moved Music OSD buttons further left
+- Added System option to popup Shutdown Menu (If System Hidden)
+
+[B]1.0.7[/B] [I]May 2012[/I]
+- Bugfix corrected version number
+
+[B]1.0.6[/B] [I]May 2012[/I]
+- Bugfix glassbar.png changed for correct version
+
+[B]1.0.5[/B] [I]May 2012[/I]
+- Added Low List view to Videos and Music
+- Bugfix Some Home Screen Thumbs not visible
+- Bugfix ReCoded main menu addon section
+- Bugfix Renamed background.jpg to Skin default.jpg
+- Updated Skin Settings to accomodate new settings
+- Added ability to change backgrounds
+- Changed recent items to panel type layout
+- Removed user addons from home screen
+- Lowered menu bar
+- Introduced Media OSD Screens from Convergence
+
+[B]1.0.4[/B] [I]Apr 2012[/I]
+- Bugfix Setting for weather icon on home screen
+- Added CD Wall to Music Visualization (From Transparency)
+- Added Setting to Hide Artist Slideshow from Music Viz
+- Added to mudisle.repo
+- Added required "script.tvtunes" "script.watchlist" "script.globalsearch" "script.randomandlastitems"
+
+[B]1.0.3[/B] [I]Apr 2012[/I]
+- Bugfix Suggested Albums not playing
+- Enabled code Jezz had hidden for weather icon on home screen
+
+[B]1.0.2[/B] [I]Apr 2012[/I]
+- Added Recently Added Music Videos
+- Added support for script.randomandlastitems if installed
+- Added support for script.watchlist if installed
+- Added support for script.xbmc.intro.movie if installed
+- Added support for script.artistslideshow if installed
+- Added support for script.cinema.experience if installed
+- Added Qwerty Keyboard
+- Added support for script.library.editor if installed
+
+[B]1.0.1[/B] [I]Apr 2012[/I]
+- Added Music Playlist extensions .xsp and .pls
+- Added option for Music Videos and Favourites
+- Required script.favourites
+
+[B]1.0.0[/B] [I]Apr 2012[/I]
+- Added User Defined Main Menu Items
+
